@@ -1,0 +1,20 @@
+---
+title: Subtraction
+author: Tiffany Gonzalez
+date: '2017-09-20'
+slug: subtraction
+categories:
+  - mathematics
+tags:
+  - subtraction
+image: "img/nature.jpeg"
+---
+
+Let's do some subtraction:
+
+```{r}
+x<-10
+y<-3
+x-y
+```
+

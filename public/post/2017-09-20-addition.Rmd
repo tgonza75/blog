@@ -1,0 +1,19 @@
+---
+title: Addition
+author: Tiffany Gonzalez
+date: '2017-09-20'
+slug: addition
+categories:
+  - mathematics
+tags:
+  - addition
+---
+
+Let's do some addition:
+
+```{r}
+x<-4
+y<-6
+x+y
+```
+

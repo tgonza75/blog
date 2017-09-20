@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematics on Tiffany&#39;s Data Science Blog</title>
+    <link>/categories/mathematics/</link>
+    <description>Recent content in Mathematics on Tiffany&#39;s Data Science Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2016 Your name or company</copyright>
+    <lastBuildDate>Wed, 20 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Addition</title>
+      <link>/post/addition/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/addition/</guid>
+      <description>Let’s do some addition:
+x&amp;lt;-4y&amp;lt;-6x+y## [1] 10</description>
+    </item>
+    
+    <item>
+      <title>Subtraction</title>
+      <link>/post/subtraction/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/subtraction/</guid>
+      <description>Let’s do some subtraction:
+x&amp;lt;-10y&amp;lt;-3x-y## [1] 7</description>
+    </item>
+    
+  </channel>
+</rss>
