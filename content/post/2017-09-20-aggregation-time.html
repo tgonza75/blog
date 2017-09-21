@@ -1,0 +1,61 @@
+---
+title: Aggregation Time
+author: Tiffany Gonzalez
+date: '2017-09-20'
+slug: aggregation-time
+categories:
+  - R
+tags:
+  - Lahman
+  - dplyr
+image: img/coding3.jpg
+---
+
+
+
+<p>Lastly, working with both the Lahman database and dplyr, let’s aggregate! To do so, we can add “group_by” and “summarize” to our codes… First things first:</p>
+<pre class="r"><code>library(Lahman)
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<p>Time to put the new functions to practice. Let’s find the career HR totals for all players but limit the list to career total of 600 or more. Put the highest totals at the top. To run this, we first need to make career_HR a variable:</p>
+<pre class="r"><code>Batting%&gt;%
+  group_by(playerID)%&gt;%
+  summarize(career_HR = sum(HR))</code></pre>
+<pre><code>## # A tibble: 18,915 x 2
+##     playerID career_HR
+##        &lt;chr&gt;     &lt;int&gt;
+##  1 aardsda01         0
+##  2 aaronha01       755
+##  3 aaronto01        13
+##  4  aasedo01         0
+##  5  abadan01         0
+##  6  abadfe01         0
+##  7 abadijo01         0
+##  8 abbated01        11
+##  9 abbeybe01         0
+## 10 abbeych01        19
+## # ... with 18,905 more rows</code></pre>
+<p>As shown, that is an abundance of players and career HR’s… now we can minimize and filter only the necessary to answer the problem stated above</p>
+<pre class="r"><code>Batting%&gt;%
+  group_by(playerID)%&gt;%
+  summarize(career_HR=sum(HR))%&gt;%
+  filter(career_HR &gt;=600)%&gt;%
+  arrange(desc(career_HR))</code></pre>
+<pre><code>## # A tibble: 8 x 2
+##    playerID career_HR
+##       &lt;chr&gt;     &lt;int&gt;
+## 1 bondsba01       762
+## 2 aaronha01       755
+## 3  ruthba01       714
+## 4 rodrial01       696
+## 5  mayswi01       660
+## 6 griffke02       630
+## 7 thomeji01       612
+## 8  sosasa01       609</code></pre>

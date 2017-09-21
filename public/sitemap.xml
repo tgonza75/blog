@@ -3,79 +3,84 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/babe-ruth/</loc>
+    <loc>https://tiffsblog.netlify.com/post/aggregation-time/</loc>
     <lastmod>2017-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/new-york-yankees-baseball-team/</loc>
+    <loc>https://tiffsblog.netlify.com/post/babe-ruth/</loc>
     <lastmod>2017-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/working-on-arranging/</loc>
+    <loc>https://tiffsblog.netlify.com/post/new-york-yankees-baseball-team/</loc>
     <lastmod>2017-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/contact/</loc>
+    <loc>https://tiffsblog.netlify.com/post/working-on-arranging/</loc>
+    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiffsblog.netlify.com/contact/</loc>
     <lastmod>2016-11-06T13:00:25+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://tiffsblog.netlify.com/about/</loc>
     <lastmod>2016-11-05T21:05:33+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://tiffsblog.netlify.com/about/</loc>
     <lastmod>2016-11-05T21:05:33+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://tiffsblog.netlify.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/contact/</loc>
+    <loc>https://tiffsblog.netlify.com/contact/</loc>
     <lastmod>2016-11-06T13:00:25+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/dplyr/</loc>
+    <loc>https://tiffsblog.netlify.com/tags/dplyr/</loc>
     <lastmod>2017-09-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/lahman/</loc>
+    <loc>https://tiffsblog.netlify.com/tags/lahman/</loc>
     <lastmod>2017-09-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>https://tiffsblog.netlify.com/post/</loc>
     <lastmod>2017-09-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
+    <loc>https://tiffsblog.netlify.com/categories/r/</loc>
     <lastmod>2017-09-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://tiffsblog.netlify.com/tags/</loc>
     <lastmod>2017-09-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://tiffsblog.netlify.com/</loc>
     <lastmod>2017-09-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

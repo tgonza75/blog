@@ -2,42 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dplyr on Tiffany&#39;s Data Science Blog</title>
-    <link>/tags/dplyr/</link>
+    <link>https://tiffsblog.netlify.com/tags/dplyr/</link>
     <description>Recent content in Dplyr on Tiffany&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
     <lastBuildDate>Wed, 20 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/dplyr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tiffsblog.netlify.com/tags/dplyr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Babe Ruth</title>
-      <link>/post/babe-ruth/</link>
+      <title>Aggregation Time</title>
+      <link>https://tiffsblog.netlify.com/post/aggregation-time/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/babe-ruth/</guid>
+      <guid>https://tiffsblog.netlify.com/post/aggregation-time/</guid>
+      <description>Lastly, working with both the Lahman database and dplyr, let’s aggregate! To do so, we can add “group_by” and “summarize” to our codes… First things first:
+library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionTime to put the new functions to practice. Let’s find the career HR totals for all players but limit the list to career total of 600 or more.</description>
+    </item>
+    
+    <item>
+      <title>Babe Ruth</title>
+      <link>https://tiffsblog.netlify.com/post/babe-ruth/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffsblog.netlify.com/post/babe-ruth/</guid>
       <description>Now that you have, hopefully, read the first post… You can now have a better understanding of how writing a code. Let’s try a new query to run. Again, let’s bring our packages in with library.
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionNow suppose we want to just see the homerun’s Babe Ruth has had during his time on the New York Yankees.</description>
     </item>
     
     <item>
       <title>New York Yankees Baseball Team</title>
-      <link>/post/new-york-yankees-baseball-team/</link>
+      <link>https://tiffsblog.netlify.com/post/new-york-yankees-baseball-team/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/new-york-yankees-baseball-team/</guid>
+      <guid>https://tiffsblog.netlify.com/post/new-york-yankees-baseball-team/</guid>
       <description>To begin our coding, we first need to download the packages in RStudio. You can click tools at the top navigation bar, then click install packages. The two packages needed to run the following query are: Lahman and dplyr. Once installed, bring the packages to use by typing library and the package name as follows:
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionOnce these are brought in, we can now use the Lahman baseball database.</description>
     </item>
     
     <item>
       <title>Working On Arranging</title>
-      <link>/post/working-on-arranging/</link>
+      <link>https://tiffsblog.netlify.com/post/working-on-arranging/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/working-on-arranging/</guid>
+      <guid>https://tiffsblog.netlify.com/post/working-on-arranging/</guid>
       <description>Let’s try working with a slightly more intense code. By adding “arrange” we can pick whether we want the most homeruns hit by a player, for instance, to be at the top or bottom of the column… Don’t forget to bring in the packages so we can use them!
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionSuppose we want to find every instance of a player hitting more than 50 Homeruns but let’s have players with the most Hr’s at the top!</description>
     </item>

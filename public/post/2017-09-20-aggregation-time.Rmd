@@ -1,0 +1,38 @@
+---
+title: Aggregation Time
+author: Tiffany Gonzalez
+date: '2017-09-20'
+slug: aggregation-time
+categories:
+  - R
+tags:
+  - Lahman
+  - dplyr
+image: img/coding3.jpg
+---
+
+Lastly, working with both the Lahman database and dplyr, let's aggregate! To do so, we can add "group_by" and "summarize" to our codes... First things first:
+
+```{r}
+library(Lahman)
+library(dplyr)
+```
+
+Time to put the new functions to practice. Let's find the career HR totals for all players but limit the list to career total of 600 or more. Put the highest totals at the top. To run this, we first need to make career_HR a variable:
+
+```{r}
+Batting%>%
+  group_by(playerID)%>%
+  summarize(career_HR = sum(HR))
+```
+
+As shown, that is an abundance of players and career HR's... now we can minimize and filter only the necessary to answer the problem stated above
+
+```{r}
+Batting%>%
+  group_by(playerID)%>%
+  summarize(career_HR=sum(HR))%>%
+  filter(career_HR >=600)%>%
+  arrange(desc(career_HR))
+```
+

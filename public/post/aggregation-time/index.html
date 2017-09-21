@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
- <title>Working On Arranging</title>
+ <title>Aggregation Time</title>
 
 
 
@@ -107,7 +107,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="entry-header">
-       Working On Arranging
+       Aggregation Time
       </div>
     </div>
   </div>
@@ -135,7 +135,7 @@
     </div>
     <div class="col-md-10">
       <div class="entry-content">
-        <p>Let’s try working with a slightly more intense code. By adding “arrange” we can pick whether we want the most homeruns hit by a player, for instance, to be at the top or bottom of the column… Don’t forget to bring in the packages so we can use them!</p>
+        <p>Lastly, working with both the Lahman database and dplyr, let’s aggregate! To do so, we can add “group_by” and “summarize” to our codes… First things first:</p>
 <pre class="r"><code>library(Lahman)
 library(dplyr)</code></pre>
 <pre><code>## 
@@ -146,120 +146,41 @@ library(dplyr)</code></pre>
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<p>Suppose we want to find every instance of a player hitting more than 50 Homeruns but let’s have players with the most Hr’s at the top! We can show this by running the following code:</p>
+<p>Time to put the new functions to practice. Let’s find the career HR totals for all players but limit the list to career total of 600 or more. Put the highest totals at the top. To run this, we first need to make career_HR a variable:</p>
 <pre class="r"><code>Batting%&gt;%
-  select(playerID,yearID,teamID,HR)%&gt;%
-  filter(HR&gt;50)%&gt;%
-  arrange(desc(HR))</code></pre>
-<pre><code>##     playerID yearID teamID HR
-## 1  bondsba01   2001    SFN 73
-## 2  mcgwima01   1998    SLN 70
-## 3   sosasa01   1998    CHN 66
-## 4  mcgwima01   1999    SLN 65
-## 5   sosasa01   2001    CHN 64
-## 6   sosasa01   1999    CHN 63
-## 7  marisro01   1961    NYA 61
-## 8   ruthba01   1927    NYA 60
-## 9   ruthba01   1921    NYA 59
-## 10  foxxji01   1932    PHA 58
-## 11 greenha01   1938    DET 58
-## 12 howarry01   2006    PHI 58
-## 13 gonzalu01   2001    ARI 57
-## 14 rodrial01   2002    TEX 57
-## 15 wilsoha01   1930    CHN 56
-## 16 griffke02   1997    SEA 56
-## 17 griffke02   1998    SEA 56
-## 18  ruthba01   1920    NYA 54
-## 19  ruthba01   1928    NYA 54
-## 20 kinerra01   1949    PIT 54
-## 21 mantlmi01   1961    NYA 54
-## 22 ortizda01   2006    BOS 54
-## 23 rodrial01   2007    NYA 54
-## 24 bautijo02   2010    TOR 54
-## 25 davisch02   2013    BAL 53
-## 26 mantlmi01   1956    NYA 52
-## 27  mayswi01   1965    SFN 52
-## 28 fostege01   1977    CIN 52
-## 29 mcgwima01   1996    OAK 52
-## 30 rodrial01   2001    TEX 52
-## 31 thomeji01   2002    CLE 52
-## 32 kinerra01   1947    PIT 51
-## 33  mizejo01   1947    NY1 51
-## 34  mayswi01   1955    NY1 51
-## 35 fieldce01   1990    DET 51
-## 36 jonesan01   2005    ATL 51</code></pre>
-<p>As you inspect the results, you can see that the homeruns descend from highest number of HR’s to lowest. We can also ascend the HR’s… To do so let’s try a new problem:</p>
-<p>Let’s find the players that strike out (SO) less than 10 times, but these players have to have at least 400 at bats (AB). This time let’s have the players with the least SO’s at the top:</p>
+  group_by(playerID)%&gt;%
+  summarize(career_HR = sum(HR))</code></pre>
+<pre><code>## # A tibble: 18,915 x 2
+##     playerID career_HR
+##        &lt;chr&gt;     &lt;int&gt;
+##  1 aardsda01         0
+##  2 aaronha01       755
+##  3 aaronto01        13
+##  4  aasedo01         0
+##  5  abadan01         0
+##  6  abadfe01         0
+##  7 abadijo01         0
+##  8 abbated01        11
+##  9 abbeybe01         0
+## 10 abbeych01        19
+## # ... with 18,905 more rows</code></pre>
+<p>As shown, that is an abundance of players and career HR’s… now we can minimize and filter only the necessary to answer the problem stated above</p>
 <pre class="r"><code>Batting%&gt;%
-  select(playerID,yearID,teamID,SO,AB)%&gt;%
-  filter(SO&lt;10 &amp; AB &gt;=400)%&gt;%
-  arrange(SO)</code></pre>
-<pre><code>##     playerID yearID teamID SO  AB
-## 1  doyleja01   1894    NY1  3 422
-## 2  seweljo01   1932    NYA  3 503
-## 3  seweljo01   1925    CLE  4 608
-## 4  seweljo01   1929    CLE  4 578
-## 5  seweljo01   1933    NYA  4 524
-## 6   wardjo01   1893    NY1  5 588
-## 7  holloch01   1922    CHN  5 592
-## 8  mcinnst01   1922    CLE  5 537
-## 9  wanerll01   1936    PIT  5 414
-## 10 wrighge01   1875    BS1  6 408
-## 11 broutda01   1889    BSN  6 485
-## 12 keelewi01   1894    BLN  6 590
-## 13  wardjo01   1894    NY1  6 540
-## 14 quinnjo02   1895    SLN  6 543
-## 15 mcinnst01   1924    BSN  6 581
-## 16 seweljo01   1926    CLE  6 578
-## 17  wardjo01   1889    NY1  7 479
-## 18 crossla01   1893    PHI  7 415
-## 19 quinnjo02   1893    SLN  7 547
-## 20 crossla01   1894    PHI  7 529
-## 21 vaughfa01   1896    CIN  7 433
-## 22 cochrmi01   1927    PHA  7 432
-## 23 seweljo01   1927    CLE  7 569
-## 24 traynpi01   1929    PIT  7 540
-## 25 muelldo01   1956    NY1  7 453
-## 26 connoro01   1885    NY1  8 455
-## 27 glassja01   1887    IN3  8 483
-## 28 glassja01   1890    NY1  8 512
-## 29 donovpa01   1893    PIT  8 499
-## 30 dungasa01   1893    CHN  8 465
-## 31 pinknge01   1893    LS3  8 446
-## 32 brodist01   1894    BLN  8 573
-## 33 quinnjo02   1894    SLN  8 405
-## 34 bierblo01   1895    PIT  8 466
-## 35 crossla01   1895    PHI  8 535
-## 36   hoydu01   1895    CIN  8 429
-## 37 roushed01   1921    CIN  8 418
-## 38 collied01   1923    CHA  8 505
-## 39 collied01   1925    CHA  8 425
-## 40 speaktr01   1927    WS1  8 523
-## 41 cochrmi01   1929    PHA  8 514
-## 42 seweljo01   1931    NYA  8 484
-## 43 wanerll01   1933    PIT  8 500
-## 44 verbaem01   1947    PHI  8 540
-## 45 ansonca01   1883    CHN  9 413
-## 46 broutda01   1887    DTN  9 500
-## 47   hoydu01   1893    WAS  9 564
-## 48 bierblo01   1894    PIT  9 525
-## 49 broutda01   1894    BLN  9 525
-## 50 milledo01   1894    SLN  9 481
-## 51 keelewi01   1896    BLN  9 544
-## 52 mckeaed01   1896    CL4  9 571
-## 53 speaktr01   1918    CLE  9 471
-## 54  dealch01   1921    CHN  9 422
-## 55 mcinnst01   1921    BOS  9 584
-## 56 severha01   1921    SLA  9 472
-## 57  highan01   1926    BSN  9 476
-## 58 summaho01   1926    CLE  9 581
-## 59 seweljo01   1928    CLE  9 588
-## 60  ricesa01   1929    WS1  9 616
-## 61 leachfr01   1931    NY1  9 515
-## 62 busched01   1945    PHA  9 416
-## 63 holmeto01   1945    BSN  9 636
-## 64 boudrlo01   1948    CLE  9 560
-## 65 mitchda01   1952    CLE  9 511</code></pre>
+  group_by(playerID)%&gt;%
+  summarize(career_HR=sum(HR))%&gt;%
+  filter(career_HR &gt;=600)%&gt;%
+  arrange(desc(career_HR))</code></pre>
+<pre><code>## # A tibble: 8 x 2
+##    playerID career_HR
+##       &lt;chr&gt;     &lt;int&gt;
+## 1 bondsba01       762
+## 2 aaronha01       755
+## 3  ruthba01       714
+## 4 rodrial01       696
+## 5  mayswi01       660
+## 6 griffke02       630
+## 7 thomeji01       612
+## 8  sosasa01       609</code></pre>
 
       </div>
     </div>
