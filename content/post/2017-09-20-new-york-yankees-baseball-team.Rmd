@@ -2,9 +2,13 @@
 title: New York Yankees Baseball Team
 author: Tiffany Gonzalez
 date: '2017-09-20'
-slug: First Post
-categories: "R"
-tags: "Lahman", "dplyr"
+slug: new-york-yankees-baseball-team
+categories:
+  - R
+tags:
+  - Lahman
+  - dplyr
+image: img/coding.jpg
 ---
 
 To begin our coding, we first need to download the packages in RStudio. You can click tools at the top navigation bar, then click install packages. The two packages needed to run the following query are: Lahman and dplyr. Once installed, bring the packages to use by typing library and the package name as follows:
@@ -21,4 +25,3 @@ Batting%>%
   select(playerID,teamID,HR)%>%
   filter(teamID=='NYA')
 ```
-

@@ -7,7 +7,7 @@ categories:
   - mathematics
 tags:
   - subtraction
-image: "img/nature.jpeg"
+image: "img/coding.jpg"
 ---
 
 Let's do some subtraction:
