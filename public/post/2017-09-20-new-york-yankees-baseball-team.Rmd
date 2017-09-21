@@ -18,7 +18,7 @@ library(Lahman)
 library(dplyr)
 ```
 
-Once these are brought in, we can now use the Lahman baseball database. Let's say, we want to see all New York Yankee players statistics on homeruns... we can run the following code:
+Once these are brought in, we can now use the Lahman baseball database. Let's say, we want to see all New York Yankee players statistics on homeruns... We can run the following code:
 
 ```{r}
 Batting%>%

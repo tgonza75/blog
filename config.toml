@@ -1,4 +1,4 @@
-baseurl = "https://tiffsblog.netlify.com/"
+baseurl = "https://tgonza75.netlify.com/"
 title = "Tiffany's Data Science Blog"
 theme = "hugo-tracks-theme"
 languageCode = "en-us"

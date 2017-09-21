@@ -24,7 +24,7 @@ library(dplyr)</code></pre>
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<p>Once these are brought in, we can now use the Lahman baseball database. Let’s say, we want to see all New York Yankee players statistics on homeruns… we can run the following code:</p>
+<p>Once these are brought in, we can now use the Lahman baseball database. Let’s say, we want to see all New York Yankee players statistics on homeruns… We can run the following code:</p>
 <pre class="r"><code>Batting%&gt;%
   select(playerID,teamID,HR)%&gt;%
   filter(teamID==&#39;NYA&#39;)</code></pre>
