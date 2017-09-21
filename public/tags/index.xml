@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tiffany&#39;s Data Science Blog</title>
-    <link>https://tiffsblog.netlify.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Tiffany&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
     <lastBuildDate>Wed, 20 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tiffsblog.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dplyr</title>
-      <link>https://tiffsblog.netlify.com/tags/dplyr/</link>
+      <link>/tags/dplyr/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tiffsblog.netlify.com/tags/dplyr/</guid>
+      <guid>/tags/dplyr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lahman</title>
-      <link>https://tiffsblog.netlify.com/tags/lahman/</link>
+      <link>/tags/lahman/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tiffsblog.netlify.com/tags/lahman/</guid>
+      <guid>/tags/lahman/</guid>
       <description></description>
     </item>
     

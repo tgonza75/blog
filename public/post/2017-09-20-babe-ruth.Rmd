@@ -1,0 +1,28 @@
+---
+title: Babe Ruth
+author: Tiffany Gonzalez
+date: '2017-09-20'
+slug: babe-ruth
+categories:
+  - R
+tags:
+  - Lahman
+  - dplyr
+image: img/babe.jpg
+---
+
+Now that you have, hopefully, read the first post... You can now have a better understanding of how writing a code. Let's try a new query to run. Again, let's bring our packages in with library.
+
+```{r}
+library(Lahman)
+library(dplyr)
+```
+
+Now suppose we want to just see the homerun's Babe Ruth has had during his time on the New York Yankees. For this query, we can run the following code:
+
+```{r}
+Batting%>%
+  select(playerID,teamID,HR)%>%
+  filter(playerID=='ruthba01',teamID=='NYA')
+```
+

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
- <title>Get in touch</title>
+ <title>Babe Ruth</title>
 
 
 
@@ -95,67 +95,85 @@
         <div class="row">
           <div class="col-md-10 main-content col-md-offset-1">
             
-<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
-  <div class="small-navbar visible-xs">
-  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
-  <h1 class="small-navbar-heading"><a href="/">Tiffany&#39;s Data Science Blog</a></h1>
-</div>
 
+<div class="col-md-12 entry">
   <div class="row">
-    <div class="col-lg-8">
-      <div class="content-column-content">
-         <h1>Get in touch</h1>
-         <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</p>
-
-<p>Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember mistaken opinions it pleasure of debating. Court front maids forty if aware their at. Chicken use are pressed removed.</p>
-
-<p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green oh.</p>
-
-         <h4>You can find me also on:</h4>
-         <p class="social social--big">
-  
-  
-  
-  
-  
-  <a href="mailto:tgonza75@lakers.mercyhurst.edu" class="email">
-    <i class="fa fa-envelope"></i>
-  </a>
-  
-  
-  
-  
-  <a href="https://github.com/tgonza75">
-    <i class="fa fa-github"></i>
-  </a>
-  
-</p>
-
-         
-         <h4>Drop me a line, maybe?</h4>
-         <form id="contact-form" class="contact-form form" method="post" action="https://formspree.io/you@yoursite.com">
-           <div class="controls">
-             <div class="form-group">
-               <label for="name">Your name *</label>
-               <input type="text" name="name" id="name" required="required" class="form-control">
-             </div>
-             <div class="form-group">
-               <label for="email">Your email *</label>
-               <input type="email" name="email" id="email" required="required" class="form-control">
-             </div>
-             <div class="form-group">
-               <label for="message">Your message for me *</label>
-               <textarea rows="4" name="message" id="message" required="required" class="form-control"></textarea>
-             </div>
-             <div>
-               <input type="submit" value="Send" class="btn btn-ghost">
-             </div>
-           </div>
-         </form>
-         
+    <div class="col-md-12">
+      <div class="entry-meta">
+        September 20
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entry-header">
+       Babe Ruth
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="entry-sidebar">
+        <div class="entry-sidebar-title">CATEGORIES</div>
+        
+        <div class="entry-categories">
+          <a href="/categories/r">r</a>
+        </div>
+        
+
+        <div class="entry-sidebar-title">Tags</div>
+        
+        <div class="entry-tags">
+          <a href="/tags/dplyr">dplyr</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/lahman">lahman</a>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="entry-content">
+        <p>Now that you have, hopefully, read the first post… You can now have a better understanding of how writing a code. Let’s try a new query to run. Again, let’s bring our packages in with library.</p>
+<pre class="r"><code>library(Lahman)
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<p>Now suppose we want to just see the homerun’s Babe Ruth has had during his time on the New York Yankees. For this query, we can run the following code:</p>
+<pre class="r"><code>Batting%&gt;%
+  select(playerID,teamID,HR)%&gt;%
+  filter(playerID==&#39;ruthba01&#39;,teamID==&#39;NYA&#39;)</code></pre>
+<pre><code>##    playerID teamID HR
+## 1  ruthba01    NYA 54
+## 2  ruthba01    NYA 59
+## 3  ruthba01    NYA 35
+## 4  ruthba01    NYA 41
+## 5  ruthba01    NYA 46
+## 6  ruthba01    NYA 25
+## 7  ruthba01    NYA 47
+## 8  ruthba01    NYA 60
+## 9  ruthba01    NYA 54
+## 10 ruthba01    NYA 46
+## 11 ruthba01    NYA 49
+## 12 ruthba01    NYA 46
+## 13 ruthba01    NYA 41
+## 14 ruthba01    NYA 34
+## 15 ruthba01    NYA 22</code></pre>
+
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+  
+
 </div>
 
           </div>

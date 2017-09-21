@@ -1,0 +1,41 @@
+---
+title: Working On Arranging
+author: Tiffany Gonzalez
+date: '2017-09-20'
+slug: working-on-arranging
+categories:
+  - R
+tags:
+  - Lahman
+  - dplyr
+image: img/coding1.jpg
+---
+
+Let's try working with a slightly more intense code. By adding "arrange" we can pick whether we want the most homeruns hit by a player, for instance, to be at the top or bottom of the column... Don't forget to bring in the packages so we can use them!
+
+```{r}
+library(Lahman)
+library(dplyr)
+```
+
+Suppose we want to find every instance of a player hitting more than 50 Homeruns but let's have players with the most Hr's at the top! We can show this by running the following code:
+
+```{r}
+Batting%>%
+  select(playerID,yearID,teamID,HR)%>%
+  filter(HR>50)%>%
+  arrange(desc(HR))
+```
+
+As you inspect the results, you can see that the homeruns descend from highest number of HR's to lowest. We can also ascend the HR's... To do so let's try a new problem:
+
+Let's find the players that strike out (SO) less than 10 times, but these players have to have at least 400 at bats (AB). This time let's have the players with the least SO's at the top:
+
+```{r}
+Batting%>%
+  select(playerID,yearID,teamID,SO,AB)%>%
+  filter(SO<10 & AB >=400)%>%
+  arrange(SO)
+```
+
+
