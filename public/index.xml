@@ -13,13 +13,13 @@
     
     
     <item>
-      <title>Aggregation Time</title>
-      <link>https://tgonza75.netlify.com/post/aggregation-time/</link>
+      <title>A look at building queries, using the New York Yankees</title>
+      <link>https://tgonza75.netlify.com/post/new-york-yankees-baseball-team/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/aggregation-time/</guid>
-      <description>Lastly, working with both the Lahman database and dplyr, let’s aggregate! To do so, we can add “group_by” and “summarize” to our codes… First things first:
-library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionTime to put the new functions to practice. Let’s find the career HR totals for all players but limit the list to career total of 600 or more.</description>
+      <guid>https://tgonza75.netlify.com/post/new-york-yankees-baseball-team/</guid>
+      <description>To begin our coding, we first need to download the packages in RStudio. You can click tools at the top navigation bar, then click install packages. The two packages needed to run the following query are: Lahman and dplyr. Once installed, bring the packages to use by typing library and the package name as follows:
+library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionOnce these are brought in, we can now use the Lahman baseball database.</description>
     </item>
     
     <item>
@@ -33,23 +33,23 @@ library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;
     </item>
     
     <item>
-      <title>New York Yankees Baseball Team</title>
-      <link>https://tgonza75.netlify.com/post/new-york-yankees-baseball-team/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://tgonza75.netlify.com/post/new-york-yankees-baseball-team/</guid>
-      <description>To begin our coding, we first need to download the packages in RStudio. You can click tools at the top navigation bar, then click install packages. The two packages needed to run the following query are: Lahman and dplyr. Once installed, bring the packages to use by typing library and the package name as follows:
-library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionOnce these are brought in, we can now use the Lahman baseball database.</description>
-    </item>
-    
-    <item>
-      <title>Working On Arranging</title>
+      <title>Time for Arranging</title>
       <link>https://tgonza75.netlify.com/post/working-on-arranging/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://tgonza75.netlify.com/post/working-on-arranging/</guid>
       <description>Let’s try working with a slightly more intense code. By adding “arrange” we can pick whether we want the most homeruns hit by a player, for instance, to be at the top or bottom of the column… Don’t forget to bring in the packages so we can use them!
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionSuppose we want to find every instance of a player hitting more than 50 Homeruns but let’s have players with the most Hr’s at the top!</description>
+    </item>
+    
+    <item>
+      <title>Working on Aggregation</title>
+      <link>https://tgonza75.netlify.com/post/aggregation-time/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/post/aggregation-time/</guid>
+      <description>Lastly, working with both the Lahman database and dplyr, let’s aggregate! To do so, we can add “group_by” and “summarize” to our codes… First things first:
+library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionTime to put the new functions to practice. Let’s find the career HR totals for all players but limit the list to career total of 600 or more.</description>
     </item>
     
     <item>
