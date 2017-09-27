@@ -11,7 +11,7 @@ tags:
   - ggplot2
 ---
 
-To beging, let's bring in the packages needed to create the following bar chart. 
+To begin, let's bring in the packages needed to create the following bar chart. 
 ```{r}
 library(Lahman)
 library(dplyr)
