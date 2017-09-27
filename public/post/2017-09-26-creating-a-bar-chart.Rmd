@@ -9,6 +9,7 @@ tags:
   - Lahman
   - dplyr
   - ggplot2
+image: img/wordcloud.png
 ---
 
 To begin, let's bring in the packages needed to create the following bar chart. 

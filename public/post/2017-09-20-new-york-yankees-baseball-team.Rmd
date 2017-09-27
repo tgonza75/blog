@@ -8,7 +8,7 @@ categories:
 tags:
   - Lahman
   - dplyr
-image: img/coding.jpg
+image: img/yankees.jpg
 ---
 
 To begin our coding, we first need to download the packages in RStudio. You can click tools at the top navigation bar, then click install packages. The two packages needed to run the following query are: Lahman and dplyr. Once installed, bring the packages to use by typing library and the package name as follows:

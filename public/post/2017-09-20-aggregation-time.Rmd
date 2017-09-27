@@ -8,7 +8,7 @@ categories:
 tags:
   - Lahman
   - dplyr
-image: img/coding3.jpg
+image: img/coding.jpg
 ---
 
 Lastly, working with both the Lahman database and dplyr, let's aggregate! To do so, we can add "group_by" and "summarize" to our codes... First things first:

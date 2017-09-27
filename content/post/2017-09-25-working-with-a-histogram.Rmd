@@ -9,6 +9,7 @@ tags:
   - Lahman
   - dplyr
   - ggplot2
+image: img/coding3.jpg
 ---
 
 This post will be showing you how to create a Histogram. A histogram is a graphical display of data that uses bars of differet heights. A histogram is similar to a bar chart, however it can group numbers into ranges. To begin, we need to load the packages that will be needed to creat the histogram, as follows:
