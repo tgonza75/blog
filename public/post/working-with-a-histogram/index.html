@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
- <title>Babe Ruth</title>
+ <title>Building a Histogram</title>
 
 
 
@@ -100,14 +100,14 @@
   <div class="row">
     <div class="col-md-12">
       <div class="entry-meta">
-        September 20
+        September 25
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
       <div class="entry-header">
-       Babe Ruth
+       Building a Histogram
       </div>
     </div>
   </div>
@@ -139,7 +139,7 @@
     </div>
     <div class="col-md-10">
       <div class="entry-content">
-        <p>Now that you have, hopefully, read the first post… You can now have a better understanding of how writing a code. Let’s try a new query to run. Again, let’s bring our packages in with library.</p>
+        <p>This post will be showing you how to create a Histogram. A histogram is a graphical display of data that uses bars of differet heights. A histogram is similar to a bar chart, however it can group numbers into ranges. To begin, we need to load the packages that will be needed to creat the histogram, as follows:</p>
 <pre class="r"><code>library(Lahman)
 library(dplyr)</code></pre>
 <pre><code>## 
@@ -150,26 +150,16 @@ library(dplyr)</code></pre>
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<p>Now suppose we want to just see the homerun’s Babe Ruth has had during his time on the New York Yankees. For this query, we can run the following code:</p>
-<pre class="r"><code>Batting%&gt;%
-  select(playerID,teamID,HR)%&gt;%
-  filter(playerID==&#39;ruthba01&#39;,teamID==&#39;NYA&#39;)</code></pre>
-<pre><code>##    playerID teamID HR
-## 1  ruthba01    NYA 54
-## 2  ruthba01    NYA 59
-## 3  ruthba01    NYA 35
-## 4  ruthba01    NYA 41
-## 5  ruthba01    NYA 46
-## 6  ruthba01    NYA 25
-## 7  ruthba01    NYA 47
-## 8  ruthba01    NYA 60
-## 9  ruthba01    NYA 54
-## 10 ruthba01    NYA 46
-## 11 ruthba01    NYA 49
-## 12 ruthba01    NYA 46
-## 13 ruthba01    NYA 41
-## 14 ruthba01    NYA 34
-## 15 ruthba01    NYA 22</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<p>To start we need the information we will be working with. From the Lahman database, we will work with the Master table, and from there we will want the weights of the baseball players. Notice the “df&lt;-” before starting the query. This creates a name for the functions that follow. Notice the “!is.na” … because the Master table has players who don’t have a weight attached to them, this will not plot any of those players into our histogram.</p>
+<pre class="r"><code>df&lt;-Master%&gt;%
+  filter(!is.na(weight))%&gt;%
+  select(weight)</code></pre>
+<p>Now that we have the basics, we can bring in the new package we’re working with… Which is ggplot2. The next line shows the geometric shape we want the chart to be in, which is a histogram. It shows the data we want be used is our “df” query. The aes shows what our x axis will be, in this case we do not have y axis. So let’s run the following code to get our histogram:</p>
+<pre class="r"><code>ggplot()+
+  geom_histogram(data=df,aes(x=weight),color=&quot;white&quot;, fill=&quot;blue&quot;, bins= 25)+
+  ggtitle(&quot;Baseball Player Weights&quot;)</code></pre>
+<p><img src="/post/2017-09-25-working-with-a-histogram_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 
       </div>
     </div>

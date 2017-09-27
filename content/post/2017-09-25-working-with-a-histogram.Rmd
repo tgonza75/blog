@@ -1,0 +1,37 @@
+---
+title: Building a Histogram
+author: Tiffany Gonzalez
+date: '2017-09-25'
+slug: working-with-a-histogram
+categories:
+  - R
+tags:
+  - Lahman
+  - dplyr
+  - ggplot2
+---
+
+This post will be showing you how to create a Histogram. A histogram is a graphical display of data that uses bars of differet heights. A histogram is similar to a bar chart, however it can group numbers into ranges. To begin, we need to load the packages that will be needed to creat the histogram, as follows:
+
+```{r}
+library(Lahman)
+library(dplyr)
+library(ggplot2)
+```
+
+To start we need the information we will be working with. From the Lahman database, we will work with the Master table, and from there we will want the weights of the baseball players. Notice the "df<-" before starting the query. This creates a name for the functions that follow. Notice the "!is.na" ... because the Master table has players who don't have a weight attached to them, this will not plot any of those players into our histogram.
+
+```{r}
+df<-Master%>%
+  filter(!is.na(weight))%>%
+  select(weight)
+```
+
+Now that we have the basics, we can bring in the new package we're working with... Which is ggplot2. The next line shows the geometric shape we want the chart to be in, which is a histogram. It shows the data we want be used is our "df" query. The aes shows what our x axis will be, in this case we do not have y axis. So let's run the following code to get our histogram: 
+
+```{r}
+ggplot()+
+  geom_histogram(data=df,aes(x=weight),color="white", fill="blue", bins= 25)+
+  ggtitle("Baseball Player Weights")
+```
+

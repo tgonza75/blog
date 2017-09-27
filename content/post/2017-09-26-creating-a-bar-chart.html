@@ -1,0 +1,28 @@
+<!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
+
+
+<p>To begin, let’s bring in the packages needed to create the following bar chart.</p>
+<pre class="r"><code>library(Lahman)
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<p>Next, let’s gather the information that we want to see displayed on the bar chart. Let’s work with the Team table from the Lahman database. And filter it to only be teams from the year 1980.Let’s also arrange the teams by ascending homeruns (HR)</p>
+<pre class="r"><code>df&lt;-Teams%&gt;%
+  filter(yearID==1980)%&gt;%
+  select(name,HR)%&gt;%
+  arrange(HR)</code></pre>
+<p>When looking at the bar chart, we want to see it in the best order possible. From highest HR to lowest HR would be ideal</p>
+<pre class="r"><code>df$name&lt;-factor(df$name, levels = df$name)</code></pre>
+<p>Finally, to actually make the graph we will bring in the geom_bar function and use the data from our “df” table. We want our x axis to be the names of the teams. And our y axis to be the HR’s. However, the bars facing horizontal, is much better when have long names of Baseball teams… So to flip the graph coordination, we can use the last line shown.</p>
+<pre class="r"><code>ggplot()+
+  geom_bar(data=df,aes(x=name, y=HR),stat=&quot;identity&quot;, color=&quot;blue&quot;, fill=&quot;white&quot;)+
+  coord_flip()</code></pre>
+<p><img src="2017-09-26-creating-a-bar-chart_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>

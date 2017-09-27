@@ -1,0 +1,43 @@
+---
+title: Creating a Bar Chart
+author: Tiffany Gonzalez
+date: '2017-09-26'
+slug: creating-a-bar-chart
+categories:
+  - R
+tags:
+  - Lahman
+  - dplyr
+  - ggplot2
+---
+
+To beging, let's bring in the packages needed to create the following bar chart. 
+```{r}
+library(Lahman)
+library(dplyr)
+library(ggplot2)
+```
+
+Next, let's gather the information that we want to see displayed on the bar chart. Let's work with the Team table from the Lahman database. And filter it to only be teams from the year 1980.Let's also arrange the teams by ascending homeruns (HR)
+
+```{r}
+df<-Teams%>%
+  filter(yearID==1980)%>%
+  select(name,HR)%>%
+  arrange(HR)
+```
+
+When looking at the bar chart, we want to see it in the best order possible. From highest HR to lowest HR would be ideal
+
+```{r}
+df$name<-factor(df$name, levels = df$name)
+```
+
+Finally, to actually make the graph we will bring in the geom_bar function and use the data from our "df" table. We want our x axis to be the names of the teams. And our y axis to be the HR's. However, the bars facing horizontal, is much better when have long names of Baseball teams... So to flip the graph coordination, we can use the last line shown. 
+
+```{r}
+ggplot()+
+  geom_bar(data=df,aes(x=name, y=HR),stat="identity", color="blue", fill="white")+
+  coord_flip()
+```
+

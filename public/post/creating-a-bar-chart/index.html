@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
- <title>Babe Ruth</title>
+ <title>Creating a Bar Chart</title>
 
 
 
@@ -100,14 +100,14 @@
   <div class="row">
     <div class="col-md-12">
       <div class="entry-meta">
-        September 20
+        September 26
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
       <div class="entry-header">
-       Babe Ruth
+       Creating a Bar Chart
       </div>
     </div>
   </div>
@@ -139,7 +139,7 @@
     </div>
     <div class="col-md-10">
       <div class="entry-content">
-        <p>Now that you have, hopefully, read the first post… You can now have a better understanding of how writing a code. Let’s try a new query to run. Again, let’s bring our packages in with library.</p>
+        <p>To beging, let’s bring in the packages needed to create the following bar chart.</p>
 <pre class="r"><code>library(Lahman)
 library(dplyr)</code></pre>
 <pre><code>## 
@@ -150,26 +150,19 @@ library(dplyr)</code></pre>
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<p>Now suppose we want to just see the homerun’s Babe Ruth has had during his time on the New York Yankees. For this query, we can run the following code:</p>
-<pre class="r"><code>Batting%&gt;%
-  select(playerID,teamID,HR)%&gt;%
-  filter(playerID==&#39;ruthba01&#39;,teamID==&#39;NYA&#39;)</code></pre>
-<pre><code>##    playerID teamID HR
-## 1  ruthba01    NYA 54
-## 2  ruthba01    NYA 59
-## 3  ruthba01    NYA 35
-## 4  ruthba01    NYA 41
-## 5  ruthba01    NYA 46
-## 6  ruthba01    NYA 25
-## 7  ruthba01    NYA 47
-## 8  ruthba01    NYA 60
-## 9  ruthba01    NYA 54
-## 10 ruthba01    NYA 46
-## 11 ruthba01    NYA 49
-## 12 ruthba01    NYA 46
-## 13 ruthba01    NYA 41
-## 14 ruthba01    NYA 34
-## 15 ruthba01    NYA 22</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<p>Next, let’s gather the information that we want to see displayed on the bar chart. Let’s work with the Team table from the Lahman database. And filter it to only be teams from the year 1980.Let’s also arrange the teams by ascending homeruns (HR)</p>
+<pre class="r"><code>df&lt;-Teams%&gt;%
+  filter(yearID==1980)%&gt;%
+  select(name,HR)%&gt;%
+  arrange(HR)</code></pre>
+<p>When looking at the bar chart, we want to see it in the best order possible. From highest HR to lowest HR would be ideal</p>
+<pre class="r"><code>df$name&lt;-factor(df$name, levels = df$name)</code></pre>
+<p>Finally, to actually make the graph we will bring in the geom_bar function and use the data from our “df” table. We want our x axis to be the names of the teams. And our y axis to be the HR’s. However, the bars facing horizontal, is much better when have long names of Baseball teams… So to flip the graph coordination, we can use the last line shown.</p>
+<pre class="r"><code>ggplot()+
+  geom_bar(data=df,aes(x=name, y=HR),stat=&quot;identity&quot;, color=&quot;blue&quot;, fill=&quot;white&quot;)+
+  coord_flip()</code></pre>
+<p><img src="/post/2017-09-26-creating-a-bar-chart_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 
       </div>
     </div>

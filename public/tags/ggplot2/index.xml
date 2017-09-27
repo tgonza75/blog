@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ggplot2 on Tiffany&#39;s Data Science Blog</title>
+    <link>/tags/ggplot2/</link>
+    <description>Recent content in Ggplot2 on Tiffany&#39;s Data Science Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2016 Your name or company</copyright>
+    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating a Bar Chart</title>
+      <link>/post/creating-a-bar-chart/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/creating-a-bar-chart/</guid>
+      <description>To beging, let’s bring in the packages needed to create the following bar chart.
+library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)Next, let’s gather the information that we want to see displayed on the bar chart. Let’s work with the Team table from the Lahman database.</description>
+    </item>
+    
+    <item>
+      <title>Building a Histogram</title>
+      <link>/post/working-with-a-histogram/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/working-with-a-histogram/</guid>
+      <description>This post will be showing you how to create a Histogram. A histogram is a graphical display of data that uses bars of differet heights. A histogram is similar to a bar chart, however it can group numbers into ranges. To begin, we need to load the packages that will be needed to creat the histogram, as follows:
+library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)To start we need the information we will be working with.</description>
+    </item>
+    
+  </channel>
+</rss>
