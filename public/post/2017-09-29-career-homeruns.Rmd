@@ -1,0 +1,64 @@
+---
+title: Fun With Scatterplot
+author: Tiffany Gonzalez
+date: '2017-09-29'
+slug: career-homeruns
+categories:
+  - R
+tags:
+  - Lahman
+  - dplyr
+  - ggplot2
+  - ggiraph
+image: img/world.jpg
+---
+
+In this post, we are going to learn how to create an interactive scatterplot. First we need to bring the packages we will be using into R.
+ 
+```{r}
+library(Lahman)
+library(dplyr)
+library(ggplot2)
+library(ggiraph)
+```
+
+As you can see, we are going to use one new package we have yet to look at, and that would be the ggiraph package. But as we have looked at before, we need to create the data set we want to work with. In this case we want the Batting table from the Lahman Baseball database, and we also want to see the following:
+
+```{r}
+df<-Batting%>%
+  group_by(playerID)%>%
+  summarize(career_HR=sum(HR), career_SO=sum(SO))%>%
+  filter(career_HR>=400)
+```
+
+We want to also use the Master table from Lahman, so to use both tables we can inner join at "playerID", as shown below:
+
+```{r}
+HR_vs_SO<-inner_join(df,Master,by=c("playerID"))%>%
+  select(nameFirst,nameLast,career_HR,career_SO)
+```
+
+For the interactive scatterplot we are creating, we want the first and last name of each player to show when your mouse hovers over the dot on the graph. To do so we can run the following code:
+
+```{r}
+HR_vs_SO$name<-paste(HR_vs_SO$nameFirst , HR_vs_SO$nameLast)
+```
+
+Now we will actually pull together all the data we want shown on this interactive scatterplot. We can also give the graph a title and name the x and y axis' 
+
+```{r}
+g<-ggplot()+
+  geom_point_interactive(data=HR_vs_SO,aes(x=career_SO,y=career_HR,tooltip=name))+
+  ggtitle("Career Homeruns vs. Strikeouts for Great Hitters")+
+  xlab("Career Strikeouts")+
+  ylab("Career Homeruns")
+```
+
+Finally, to put this graph to work, we can use the package ggiraph to print our ggplot:
+
+```{r}
+ggiraph(code=print(g))
+```
+
+
+

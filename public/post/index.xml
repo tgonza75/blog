@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
-    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tgonza75.netlify.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fun With Scatterplot</title>
+      <link>https://tgonza75.netlify.com/post/career-homeruns/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/post/career-homeruns/</guid>
+      <description>In this post, we are going to learn how to create an interactive scatterplot. First we need to bring the packages we will be using into R.
+library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(ggiraph)As you can see, we are going to use one new package we have yet to look at, and that would be the ggiraph package.</description>
+    </item>
     
     <item>
       <title>Creating a Bar Chart</title>

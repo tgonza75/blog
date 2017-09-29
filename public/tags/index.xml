@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
-    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tgonza75.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,16 +15,25 @@
     <item>
       <title>Dplyr</title>
       <link>https://tgonza75.netlify.com/tags/dplyr/</link>
-      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://tgonza75.netlify.com/tags/dplyr/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Ggiraph</title>
+      <link>https://tgonza75.netlify.com/tags/ggiraph/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/tags/ggiraph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ggplot2</title>
       <link>https://tgonza75.netlify.com/tags/ggplot2/</link>
-      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://tgonza75.netlify.com/tags/ggplot2/</guid>
       <description></description>
@@ -33,7 +42,7 @@
     <item>
       <title>Lahman</title>
       <link>https://tgonza75.netlify.com/tags/lahman/</link>
-      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://tgonza75.netlify.com/tags/lahman/</guid>
       <description></description>
