@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flexdashboard on Tiffany&#39;s Data Science Blog</title>
+    <link>https://tgonza75.netlify.com/tags/flexdashboard/</link>
+    <description>Recent content in Flexdashboard on Tiffany&#39;s Data Science Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2016 Your name or company</copyright>
+    <lastBuildDate>Fri, 29 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tgonza75.netlify.com/tags/flexdashboard/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dashboard</title>
+      <link>https://tgonza75.netlify.com/post/dashboard/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/post/dashboard/</guid>
+      <description>ggplot()+geom_point(data=result,aes(x=SO,y=HR))+xlab(&amp;quot;Strikeouts&amp;quot;)+ylab(&amp;quot;Homeruns&amp;quot;)ggplot()+geom_histogram(data=result,aes(x=HR),bins=5, color=&amp;quot;blue&amp;quot;,fill=&amp;quot;white&amp;quot;)+xlab(&amp;quot;Homeruns&amp;quot;)ggplot()+geom_point(data=result,aes(x=yearID,y=HR))+geom_line(data=result,aes(x=yearID,y=HR))+xlab(&amp;quot;Year&amp;quot;)+ylab(&amp;quot;Homeruns&amp;quot;)</description>
+    </item>
+    
+  </channel>
+</rss>

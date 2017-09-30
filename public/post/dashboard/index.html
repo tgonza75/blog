@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
- <title>Building a Histogram</title>
+ <title>Dashboard</title>
 
 
 
@@ -100,14 +100,14 @@
   <div class="row">
     <div class="col-md-12">
       <div class="entry-meta">
-        September 25
+        September 29
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
       <div class="entry-header">
-       Building a Histogram
+       Dashboard
       </div>
     </div>
   </div>
@@ -147,27 +147,21 @@
     </div>
     <div class="col-md-10">
       <div class="entry-content">
-        <p>This post will be showing you how to create a Histogram. A histogram is a graphical display of data that uses bars of differet heights. A histogram is similar to a bar chart, however it can group numbers into ranges. To begin, we need to load the packages that will be needed to creat the histogram, as follows:</p>
-<pre class="r"><code>library(Lahman)
-library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>library(ggplot2)</code></pre>
-<p>To start we need the information we will be working with. From the Lahman database, we will work with the Master table, and from there we will want the weights of the baseball players. Notice the “df&lt;-” before starting the query. This creates a name for the functions that follow. Notice the “!is.na” … because the Master table has players who don’t have a weight attached to them, this will not plot any of those players into our histogram.</p>
-<pre class="r"><code>df&lt;-Master%&gt;%
-  filter(!is.na(weight))%&gt;%
-  select(weight)</code></pre>
-<p>Now that we have the basics, we can bring in the new package we’re working with… Which is ggplot2. The next line shows the geometric shape we want the chart to be in, which is a histogram. It shows the data we want be used is our “df” query. The aes shows what our x axis will be, in this case we do not have y axis. So let’s run the following code to get our histogram:</p>
+        <pre class="r"><code>ggplot()+
+  geom_point(data=result,aes(x=SO,y=HR))+
+  xlab(&quot;Strikeouts&quot;)+
+  ylab(&quot;Homeruns&quot;)</code></pre>
+<p><img src="/post/2017-09-29-dashboard_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <pre class="r"><code>ggplot()+
-  geom_histogram(data=df,aes(x=weight),color=&quot;white&quot;, fill=&quot;blue&quot;, bins= 25)+
-  ggtitle(&quot;Baseball Player Weights&quot;)</code></pre>
-<p><img src="/post/2017-09-25-working-with-a-histogram_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+  geom_histogram(data=result,aes(x=HR),bins=5, color=&quot;blue&quot;,fill=&quot;white&quot;)+
+  xlab(&quot;Homeruns&quot;)</code></pre>
+<p><img src="/post/2017-09-29-dashboard_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  xlab(&quot;Year&quot;)+
+  ylab(&quot;Homeruns&quot;)</code></pre>
+<p><img src="/post/2017-09-29-dashboard_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 
       </div>
     </div>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tgonza75.netlify.com/post/dashboard/</loc>
+    <lastmod>2017-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tgonza75.netlify.com/post/career-homeruns/</loc>
     <lastmod>2017-09-29T00:00:00+00:00</lastmod>
   </url>
@@ -66,6 +71,12 @@
   
   <url>
     <loc>https://tgonza75.netlify.com/tags/dplyr/</loc>
+    <lastmod>2017-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tgonza75.netlify.com/tags/flexdashboard/</loc>
     <lastmod>2017-09-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

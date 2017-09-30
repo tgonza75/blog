@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Dashboard</title>
+      <link>https://tgonza75.netlify.com/post/dashboard/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/post/dashboard/</guid>
+      <description>ggplot()+geom_point(data=result,aes(x=SO,y=HR))+xlab(&amp;quot;Strikeouts&amp;quot;)+ylab(&amp;quot;Homeruns&amp;quot;)ggplot()+geom_histogram(data=result,aes(x=HR),bins=5, color=&amp;quot;blue&amp;quot;,fill=&amp;quot;white&amp;quot;)+xlab(&amp;quot;Homeruns&amp;quot;)ggplot()+geom_point(data=result,aes(x=yearID,y=HR))+geom_line(data=result,aes(x=yearID,y=HR))+xlab(&amp;quot;Year&amp;quot;)+ylab(&amp;quot;Homeruns&amp;quot;)</description>
+    </item>
+    
+    <item>
       <title>Fun With Scatterplot</title>
       <link>https://tgonza75.netlify.com/post/career-homeruns/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
