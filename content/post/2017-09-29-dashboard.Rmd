@@ -11,6 +11,7 @@ tags:
   - ggplot2
   - ggiraph
   - flexdashboard
+image: img/dashboard.jpg
 ---
 
 ##Dashboards are a great way to organize and present information that is easy to read on one given page or site. A dashboard is an interactive tool that allows the user to visualize large amounts of data.
