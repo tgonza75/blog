@@ -13,6 +13,10 @@ tags:
   - flexdashboard
 ---
 
+##Dashboards are a great way to organize and present information that is easy to read on one given page or site. A dashboard is an interactive tool that allows the user to visualize large amounts of data.
+
+To set up our dashboard we need to bring in our packages, and this time we will be adding the new package to set the dashboard up called, flexdashboard.
+
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(Lahman)
@@ -24,6 +28,8 @@ result<-Batting%>%
   select(yearID,SO,HR)
 ```
 
+The first graph shown is a scatterplot: 
+
 ```{r}
 ggplot()+
   geom_point(data=result,aes(x=SO,y=HR))+
@@ -31,11 +37,15 @@ ggplot()+
   ylab("Homeruns")
 ```
 
+This graph is a histogram:
+
 ```{r}
 ggplot()+
   geom_histogram(data=result,aes(x=HR),bins=5, color="blue",fill="white")+
   xlab("Homeruns")
 ```
+
+This is a combination of a scatterplot and line graph: 
 
 ```{r}
 ggplot()+
@@ -44,3 +54,7 @@ ggplot()+
   xlab("Year")+
   ylab("Homeruns")
 ```
+
+Once our graphs are created and ready, our dashboard can now be built. 
+
+Since dashboards are not very compatible with a blog post, you can find the dashboard on my Github page, by clicking [here](https://tgonza75.github.io/dashboard/) 

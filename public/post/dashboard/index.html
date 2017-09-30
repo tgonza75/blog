@@ -147,21 +147,30 @@
     </div>
     <div class="col-md-10">
       <div class="entry-content">
-        <pre class="r"><code>ggplot()+
+        <div id="dashboards-are-a-great-way-to-organize-and-present-information-that-is-easy-to-read-on-one-given-page-or-site.-a-dashboard-is-an-interactive-tool-that-allows-the-user-to-visualize-large-amounts-of-data." class="section level2">
+<h2>Dashboards are a great way to organize and present information that is easy to read on one given page or site. A dashboard is an interactive tool that allows the user to visualize large amounts of data.</h2>
+<p>To set up our dashboard we need to bring in our packages, and this time we will be adding the new package to set the dashboard up called, flexdashboard.</p>
+<p>The first graph shown is a scatterplot:</p>
+<pre class="r"><code>ggplot()+
   geom_point(data=result,aes(x=SO,y=HR))+
   xlab(&quot;Strikeouts&quot;)+
   ylab(&quot;Homeruns&quot;)</code></pre>
 <p><img src="/post/2017-09-29-dashboard_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>This graph is a histogram:</p>
 <pre class="r"><code>ggplot()+
   geom_histogram(data=result,aes(x=HR),bins=5, color=&quot;blue&quot;,fill=&quot;white&quot;)+
   xlab(&quot;Homeruns&quot;)</code></pre>
 <p><img src="/post/2017-09-29-dashboard_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>This is a combination of a scatterplot and line graph:</p>
 <pre class="r"><code>ggplot()+
   geom_point(data=result,aes(x=yearID,y=HR))+
   geom_line(data=result,aes(x=yearID,y=HR))+
   xlab(&quot;Year&quot;)+
   ylab(&quot;Homeruns&quot;)</code></pre>
 <p><img src="/post/2017-09-29-dashboard_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Once our graphs are created and ready, our dashboard can now be built.</p>
+<p>Since dashboards are not very compatible with a blog post, you can find the dashboard on my Github page, by clicking <a href="https://tgonza75.github.io/dashboard/">here</a></p>
+</div>
 
       </div>
     </div>

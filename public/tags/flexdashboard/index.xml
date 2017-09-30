@@ -18,7 +18,8 @@
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://tgonza75.netlify.com/post/dashboard/</guid>
-      <description>ggplot()+geom_point(data=result,aes(x=SO,y=HR))+xlab(&amp;quot;Strikeouts&amp;quot;)+ylab(&amp;quot;Homeruns&amp;quot;)ggplot()+geom_histogram(data=result,aes(x=HR),bins=5, color=&amp;quot;blue&amp;quot;,fill=&amp;quot;white&amp;quot;)+xlab(&amp;quot;Homeruns&amp;quot;)ggplot()+geom_point(data=result,aes(x=yearID,y=HR))+geom_line(data=result,aes(x=yearID,y=HR))+xlab(&amp;quot;Year&amp;quot;)+ylab(&amp;quot;Homeruns&amp;quot;)</description>
+      <description>Dashboards are a great way to organize and present information that is easy to read on one given page or site. A dashboard is an interactive tool that allows the user to visualize large amounts of data.To set up our dashboard we need to bring in our packages, and this time we will be adding the new package to set the dashboard up called, flexdashboard.
+The first graph shown is a scatterplot:</description>
     </item>
     
   </channel>
