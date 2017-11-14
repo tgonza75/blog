@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+ <title>WordCloud</title>
+
+
+
+<meta name="description" content="Describe your website">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+
+<link rel="stylesheet" href="https://tgonza75.netlify.com/css/bootstrap.min.css">
+<link rel="stylesheet" id="ct-tracks-google-fonts-css" href="//fonts.googleapis.com/css?family=Raleway%3A400%2C700&amp;subset=latin%2Clatin-ext&amp;ver=4.7.2" type="text/css" media="all">
+<link rel="stylesheet" href="https://tgonza75.netlify.com/css/font-awesome.min.css">
+
+<link href="https://tgonza75.netlify.com/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+<link href="https://tgonza75.netlify.com/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://tgonza75.netlify.com/img/favicon.png">
+
+
+</head>
+  <body>
+    <div id="root">
+      <div class="container-fluid">
+        <div class="row site-header">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12 top-navigation">
+                <div class="row">
+  <div class="col-sm-6">
+    <div class="categories-block">
+      <a href="" class="track-categories"></a>
+      
+      <a href="/categories/r">r</a>
+      
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="social-media-block">
+
+      
+      
+      
+      
+      
+      <a href="mailto:tgonza75@lakers.mercyhurst.edu" data-animate-hover="pulse" class="email">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+      
+      
+      
+      <a href="https://github.com/tgonza75" data-animate-hover="pulse">
+        <i class="fa fa-github"></i>
+      </a>
+      
+
+    </div>
+  </div>
+</div>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 header col-md-offset-1">
+                <div class="row">
+  <div class="col-md-6">
+    <div class="title-info">
+      
+      <a href=""> Tiffany&#39;s Data Science Blog </a>
+      
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="menu">
+      <a href="/">Home </a>
+      
+    </div>
+  </div>
+
+</div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 main-content col-md-offset-1">
+            
+
+<div class="col-md-12 entry">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entry-meta">
+        November 14
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entry-header">
+       WordCloud
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="entry-sidebar">
+        <div class="entry-sidebar-title">CATEGORIES</div>
+        
+        <div class="entry-categories">
+          <a href="/categories/r">r</a>
+        </div>
+        
+
+        <div class="entry-sidebar-title">Tags</div>
+        
+        <div class="entry-tags">
+          <a href="/tags/dplyr">dplyr</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/flexdashboard">flexdashboard</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/ggiraph">ggiraph</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/ggplot2">ggplot2</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/gutenbergr">gutenbergr</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/lahman">lahman</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/reshape2">reshape2</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/stringr">stringr</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/tidytext">tidytext</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/tm">tm</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/wordcloud">wordcloud</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/wordcloud2">wordcloud2</a>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="entry-content">
+        <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="/rmarkdown-libs/wordcloud2/wordcloud.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/wordcloud2/wordcloud2-all.js"></script>
+<script src="/rmarkdown-libs/wordcloud2/hover.js"></script>
+<script src="/rmarkdown-libs/wordcloud2-binding/wordcloud2.js"></script>
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<div id="a-wordcloud-is-a-weighted-list-in-visual-design.-it-is-an-image-of-words-put-together-and-the-size-of-each-word-depends-on-its-frequency-whether-it-be-in-a-book-or-an-article.-in-this-post-you-will-learn-how-to-use-a-playwright-from-the-gutenberg-database-to-make-a-wordcloud-of-the-most-frequently-used-words-in-the-book-peter-pan." class="section level3">
+<h3>A wordcloud is a weighted list, in visual design. It is an image of words put together, and the size of each word depends on it’s frequency, whether it be in a book or an article. In this post, you will learn how to use a playwright from the Gutenberg database, to make a wordcloud of the most frequently used words in the book ‘Peter Pan’.</h3>
+<p>We first need to import our libraries we will be using:</p>
+<p>Since Gutenberg has a huge list of novels within, and for this post, we just want to work with 1 single novel, Peter Pan, we can run the following code to detect the exat book we are looking for:</p>
+<pre class="r"><code>gutenberg_works(str_detect(title,&#39;Peter Pan&#39;))</code></pre>
+<pre><code>## # A tibble: 3 x 8
+##   gutenberg_id
+##          &lt;int&gt;
+## 1         1332
+## 2        24012
+## 3        39755
+## # ... with 7 more variables: title &lt;chr&gt;, author &lt;chr&gt;,
+## #   gutenberg_author_id &lt;int&gt;, language &lt;chr&gt;, gutenberg_bookshelf &lt;chr&gt;,
+## #   rights &lt;chr&gt;, has_text &lt;lgl&gt;</code></pre>
+<pre class="r"><code>peter_pan&lt;-gutenberg_download(39755)</code></pre>
+<pre><code>## Determining mirror for Project Gutenberg from http://www.gutenberg.org/robot/harvest</code></pre>
+<pre><code>## Using mirror http://aleph.gutenberg.org</code></pre>
+<p>Next, we want to split apart each line of text into words. We can use the function unnest_tokens() to do so:</p>
+<pre class="r"><code>words_df&lt;-peter_pan%&gt;%
+  unnest_tokens(word,text)
+
+words_df</code></pre>
+<pre><code>## # A tibble: 9,479 x 2
+##    gutenberg_id         word
+##           &lt;int&gt;        &lt;chr&gt;
+##  1        39755 illustration
+##  2        39755         with
+##  3        39755          the
+##  4        39755       spring
+##  5        39755        comes
+##  6        39755        wendy
+##  7        39755          the
+##  8        39755        story
+##  9        39755           of
+## 10        39755        peter
+## # ... with 9,469 more rows</code></pre>
+<p>We also want to get rid of any common words, such as “a”,“the”,“and”, these are called stop_words. To delete these from showing our wordloud, we will run the following:</p>
+<pre class="r"><code>words_df&lt;-words_df%&gt;%
+  filter(!word %in% stop_words$word)
+
+words_df</code></pre>
+<pre><code>## # A tibble: 3,571 x 2
+##    gutenberg_id         word
+##           &lt;int&gt;        &lt;chr&gt;
+##  1        39755 illustration
+##  2        39755       spring
+##  3        39755        wendy
+##  4        39755        story
+##  5        39755        peter
+##  6        39755          pan
+##  7        39755       retold
+##  8        39755        fairy
+##  9        39755         play
+## 10        39755          sir
+## # ... with 3,561 more rows</code></pre>
+<p>Next, we want to count how many times each word comes up within the novel… To figure this out, we will group by each word and then count that word to get its frequency:</p>
+<pre class="r"><code>word_freq&lt;-words_df%&gt;%
+  group_by(word)%&gt;%
+  summarize(count=n())
+
+word_freq</code></pre>
+<pre><code>## # A tibble: 1,541 x 2
+##          word count
+##         &lt;chr&gt; &lt;int&gt;
+##  1    _colour     8
+##  2    _first_     1
+##  3     _hear_     1
+##  4      _his_     1
+##  5        _i_     1
+##  6     _kiss_     1
+##  7     _like_     1
+##  8       _me_     1
+##  9 _thimbles_     1
+## 10          1     2
+## # ... with 1,531 more rows</code></pre>
+<p>Finally, it’s time to create our wordcloud! We will use a minimum frequency of 8 times a word has to appear, so we can depict a good wordcloud.</p>
+<pre class="r"><code>wordcloud(word_freq$word,word_freq$count,min.freq=8)</code></pre>
+<p><img src="/post/Wordcloud_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>One final decision, depending on your personality…We can use the wordcloud2 package to make this a little bit more colorful and pretty.</p>
+<pre class="r"><code>wordcloud2(word_freq,background=&#39;black&#39;)</code></pre>
+<pre><code>## Warning in if (class(data) == &quot;table&quot;) {: the condition has length &gt; 1 and
+## only the first element will be used</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"word":["_colour","_first_","_hear_","_his_","_i_","_kiss_","_like_","_me_","_thimbles_","1","abject","aboard","accidentally","act","address","admired","adopt","adopted","adventure","advised","ages","ah","aha","air","airy","alarum","alice","alike","alley","allowed","altogether","anchored","angela","anger","angry","animals","annoyed","answer","answered","anxious","anxiously","apparition","appeal","appeared","appearing","appease","approach","approaching","arm","arm's","armed","armful","arms","arose","arranged","arrival","arrived","arrow","ashore","asleep","astonished","astonishing","astride","attack","attacked","attempt","attention","attractive","autumn","awaiting","awakened","awful","awoke","aye","baby","backwards","bad","ball","band","banging","banks","bare","barked","barking","barley","barred","barrie","barrie's","basket","baskets","bathed","bathing","bathroom","battle","baying","beamed","beard","bearded","bears","bearskin","beast","beasts","beat","beaten","beautiful","beautifully","bed","bedclothes","beds","bedtime","beetle","begged","begin","beginning","begins","behaviour","bejewelled","believed","bell","bells","beloved","bent","berries","bers","bewitched","bidding","bigger","binding","bird","birds","black","blew","blood","blow","blown","blue","boastings","boat","boats","bogie","bolster","bolt","bonds","bones","boo","book","boots","bore","born","bottle","bound","bow","bowed","bowl","boy","boy's","boys","braggings","branches","brave","bravely","braver","bravest","breaking","breath","breathless","bright","brighter","brilliant","bring","britain","britannia","broke","broken","bronze","brothers","brought","brown","brushed","buccaneers","build","built","bulls","bulwarks","bump","bundled","buried","burning","burst","bush","business","busy","button","bye","cabin","cake","call","called","calling","calls","calm","cap","captain","captain's","captured","careful","carefully","carried","carry","catch","cats","caught","cautiously","cave","ceased","ceiling","celebrity","chain","chained","chair","chairs","chance","change","character","charge","charges","charming","charmingly","chased","chasing","cheek","cheer","cheerlessness","cheers","chief","chieftainess","child","children","children's","chimney","chin","chuckled","chuckling","cinderella","claimed","clambered","clamour","clamoured","clap","clapping","clashing","clean","cleaning","clever","cleverly","cleverness","click","cliffs","clinging","cloak","clock","clocks","close","closed","closely","clothes","clumsily","clustered","coat","coats","coaxed","cock","cock's","collar","colour","coloured","combat","combed","combing","comfort","comfortable","comfortably","comforted","coming","companion","companions","company","compelled","composer","concealing","conceit","concluded","conquering","consent","contents","continued","cook","cool","cordage","corn","corncrake","corner","cosily","cosy","cough","country","courage","cover","covered","covering","cowardly","cows","crackling","cradle","craft","crawled","crawling","creation","creature","creatures","creeping","crept","crew","cricket","cried","crimson","crocodile","crocodiles","crook","cross","crossbones","crow","crowded","crowed","crowing","cruel","cruelly","cry","crying","curled","curls","curly","curtain","curtsied","cut","daggers","daintily","dance","danced","dances","dancing","danger","dangerously","daniel","dar","dared","dark","darkness","darling","darling's","darn","darted","darting","dashed","day","days","dead","deadly","deal","dear","dearly","dears","deck","declared","deeds","deep","defray","deliberate","delight","delighted","delightful","denied","depths","desolate","despair","despaired","despairingly","determined","diabolical","die","difficult","difficulty","dignified","dim","dinner","directly","dirty","disappeared","disgrace","disguised","disgust","dismissing","disobey","disposition","distance","distinctly","distress","distressed","dived","dog","dogged","dogs","doings","doodledoo","doom","door","double","downstairs","dozing","dragged","draught","drawer","drawing","dreaded","dreadful","dreamt","dress","dressed","dresser","drinking","drive","driven","dropping","drops","drowned","drunk","dub","duped","dust","dwellers","dying","eagerly","ear","easily","eat","echo","eel","eerie","effect","egg","eldest","electric","elfin","eluding","emphatically","empty","en","encounter","enemies","enemy","england","english","enjoy","enjoyed","enlightened","enormous","enraged","ensued","enter","er","escape","escorted","ev","evening","evil","excellent","exchanged","excited","excitedly","excitement","exciting","exclaimed","excused","exhausted","expect","expedition","expenses","explanation","express","extra","eyes","faint","fainter","fainting","fairies","fairy","fairyland","faithful","faithfully","fall","falls","familiar","family","farther","fashion","fast","fasten","fastened","fate","father","fathers","favourite","fear","fearing","feebly","feel","feeling","feelings","feet","fell","fellow","fetched","field","fiend","fierce","fiery","fight","fighting","figure","figures","filled","finally","finding","fine","finger","finished","fire","fireplace","fireside","firm","fishing","fist","fitting","fixed","flag","flame","flapping","flash","fled","fleet","flew","flickered","flight","flitted","floated","floor","flopping","flung","fluting","fly","flying","folded","football","footing","footsteps","forced","forest","forgetting","forgot","fortunately","forward","found","freely","frenzy","fresh","friends","frighten","frightened","fris","frisky","fro","frock","fruit","fun","funny","fur","furious","furiously","furnished","furze","fuss","game","gecco","gentlemen","gently","george","gigantic","girl","girls","glad","glades","glance","glass","glasses","gleamed","glee","glittering","gloating","gold","graceful","grasp","grass","grate","greasy","greedily","green","greenish","grew","grey","grief","grimaces","grimly","grin","grindstone","ground","grow","grown","gruesome","gruff","guard","guardian","guess","guessed","guidance","guilty","hair","hairs","hairy","half","hand","handed","hands","happened","happily","happy","hard","harder","hares","haste","hat","hating","hats","hauling","head","heads","hear","heard","heart","hearthrug","hearts","heavy","heels","held","hero","hesitated","hid","hidden","hide","hideous","hiding","hit","ho","hoist","hold","hollow","hollowed","home","homely","honoured","hoo","hook","hook's","hope","hoped","horrible","horribly","horrid","horror","hot","house","household","housemaid","houses","howled","howls","huddled","huge","hundreds","hung","hungry","hunting","hurrah","hurried","hurt","hurts","ice","icing","ick","idea","ii","iii","ill","illustrated","illustration","illustrations","imagine","imitate","imitating","immediately","imploring","improved","inaudible","included","indian","indians","indignantly","induced","ink","inquired","inside","inspired","instantly","intent","intention","interrupting","invited","irish","iron","issue","issued","iv","j.m","jack","james","jaws","jealous","jerking","joe","john","john's","johnny","join","joined","joke","jolly","journey","joy","joyfully","jug","jumped","jumping","keeping","kennel","kill","killed","kills","king","kiss","kissed","kissing","kite","knelt","knives","knocked","knocker","knocking","knowing","ky","la","ladder","ladies","lagoon","lake","land","language","lap","larks","latch","late","laugh","laughed","laughing","laughter","lay","lead","leader","leaders","lean","leapt","learnt","leave","leaves","leaving","led","ledge","left","legs","length","licking","lieutenant","lieutenants","life","light","lights","likes","lily","limited","lines","ling","lips","list","listen","listened","listening","lit","litt","littlest","live","lived","lively","living","liza","lo","logs","londony","lonely","longed","longing","loo","looked","lore","losing","lost","lot","lots","loud","loudly","loved","loveliest","lovely","lower","lowered","lowest","luck","lul","lullaby","lurking","machine","mad","magical","maid","majesty's","managed","marvellous","mast","materials","matter","mauve","meant","meantime","medicine","meet","melody","mending","mermaid","mermaids","merrily","merry","message","messrs","mice","michael","michael's","middle","midst","millions","mind","mine","minute","miserable","miss","missy","mistake","mixture","moaned","mode","moira","moles","moment","moments","monster","months","morning","mortal","mortals","mos","mother","motherly","mothers","motionless","mourning","mouth","moving","mummy","mushroom","mushrooms","music","musson","mutinous","mysterious","nana","nana's","napoleon","naturally","naught's","naughty","nearer","neatly","neck","neighbouring","nest","nestled","news","newspapers","nibs","nice","nicest","night","nightgown","ninety","noise","nurse","nurseries","nursery","nurses","ny","o'connor","o'connor's","occasional","offered","on't","oo","ordinary","ostrich","outdone","overboard","overcome","overhead","overjoyed","overtook","pack","packed","packing","pains","painted","pan","pan's","panic","panther","papooses","parlour","partner","party","passed","passing","passionate","patent","patterns","paulton","paw","paws","peacefully","peep","peeped","people","perambulators","perceived","peril","permission","person","persuasions","peter","peter's","piano","picked","picture","pictures","pieces","piercing","pillow","pipe","pirate","pirate's","pirates","plan","plank","planned","plate_","play","playground","playing","pleadings","pleasant","pleased","pleasure","plight","pluck","pockets","poison","poisoned","politely","pony","poor","poorest","popularity","postcards","poured","pouring","power","practise","preface","presently","pressed","pret","pretended","prettily","pretty","prevent","price","prickly","prim","prince","printed","prisoners","promise","promised","prong","pronged","proper","protect","prowled","publishers","pulled","pulling","pumpkins","punishment","purnell","purpose","pursued","pursuit","pushed","puzzle","puzzled","pyjamas","queer","question","quickly","quiet","quietened","quietly","rabbits","rage","ral","ran","rang","rapture","rats","rattle","reach","reached","ready","real","realised","reason","reassured","recapturing","recognised","red","redskins","reformed","refused","related","released","relief","remaining","remembered","replied","reproachful","reproachfully","rescue","respectful","rest","rested","result","retold","return","returned","returning","revenge","reynolds","rhyme","rich","ringing","rise","risen","rising","roared","roaring","robed","rock","rocks","rolled","roof","roofs","roomy","roots","ropes","rose","round","rowed","rowing","rub","rubbing","ruffians","rug","rule","rummage","run","running","rush","rushed","rushing","sack","sacrifice","sad","sadly","safe","safely","safer","safety","sailed","sailing","sailor","sailors","sails","sally","sang","sardines","sat","saturday","save","saved","scarcely","scaring","scarlet","scheme","schoolboy","score","scout","screen","scuttle","sea","sealed","seamed","searching","seat","seated","secretly","secure","seized","seizing","selections","sentence","sentry","set","settled","sewing","sewn","shadow","shadows","shake","shaken","sharpened","sharply","shed","shielding","ship","ship's","shone","shook","shop","shore","shot","shoulder","shoulders","shouted","shouting","shrill","shut","shutting","sight","sign","signal","silence","silenced","silently","sillies","silver","simply","sing","singing","single","sir","sit","sits","sitting","size","skipped","skipping","skull","sky","slain","slapped","sledge","sleep","sleepily","sleeping","slender","slid","slightly","slipped","slipper","slowly","slum","slunk","smee","smile","smiles","snarled","snatched","soap","soaped","sobbed","society","socks","soft","softly","soiled","sole","solemnly","somersaults","somerset","song","sons","sorrow","sort","sorts","sound","sounded","speaking","special","speechless","spent","spite","splashed","splendid","spoke","sprang","spreading","spring","sprite","squalling","squinting","staircase","stairs","stairways","stamping","standing","star","starkey","starry","start","started","startled","stay","stayed","steadily","steal","step","stepped","stepping","steps","stern","stick","stole","stood","stools","stories","storm","story","straight","strange","stretched","stricken","stronger","struck","struggling","stump","stunned","subsequently","succeeded","success","sudden","suddenly","sufficiently","suggested","suit","suited","summer","sunlight","superstitious","surely","surprise","surprised","swallowed","swam","swarmed","swarthy","swear","sweet","sweetest","sweetly","swift","swiftly","swim","swimming","swinging","switched","sword","swords","sy","sympathy","tack","tackle","tail","taking","tale","tales","talked","talking","tall","tap","tarpaulin","tarred","taste","tastes","teach","tears","telling","tempting","tenderly","ter","terrible","terribly","terrified","terror","thickets","thimble","thimbles","thinking","thousand","threw","throw","tick","ticked","ticking","tide","tie","tied","ties","tiger","tightly","till","time","times","tinge","tink","tinker","tinkled","tinkling","tiny","tipped","tired","tis","tle","told","tom","tootles","tootling","top","tops","toronto","torrent","touching","tramping","transported","treacherous","treasure","tree","trees","tremendous","tresses","tribe","trick","tricked","triumph","triumphant","trotted","trouble","trousers","true","trunk","trunks","tuck","tucked","twenty","twilight","twin","twins","ty","ugly","unaware","uncanny","underground","undergrowth","understood","underwood","uneasily","unfledged","unseen","unshaven","usual","vain","vanished","velvet","vent","version","vi","victorious","victory","villain","villainously","voice","voices","volunteer","volunteered","voracious","vowed","waggle","waited","waiting","wake","walk","walked","walking","wallowed","walls","wandered","waned","warm","warning","warranted","watched","watching","water","waving","weak","weakening","weapons","wear","wearied","wee","week","weird","wendy","wendy's","whichever","whilst","whirr","whispered","whistle","white","wicked","wickedness","wide","wigwams","wild","wildly","wily","wind","window","winter","wished","withdraw","woeful","wolf","wolves","woman","won","wonderful","wood","woods","woodward","words","wore","world","worse","worth","wounded","wrapped","wrenched","wrestling","wretches","wriggling","wrists","write","yard","yelled","yo","youth","zoo"],"freq":[8,1,1,1,1,1,1,1,1,2,1,1,2,3,1,1,1,1,1,1,1,1,1,4,1,2,2,1,1,1,1,1,2,1,2,1,1,1,2,4,1,1,1,1,1,1,1,1,3,1,1,1,2,1,1,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1,2,3,1,2,2,2,1,1,1,1,1,1,1,1,2,2,1,3,1,3,1,1,1,1,1,1,1,1,2,1,1,6,5,12,2,7,1,1,3,1,4,1,1,1,2,17,2,1,1,1,1,1,1,1,1,7,2,5,1,1,1,1,4,1,4,1,1,1,1,1,2,1,1,1,1,2,1,3,1,1,1,12,1,61,1,1,2,2,2,1,1,2,2,2,2,1,6,1,1,1,1,1,1,2,7,1,2,2,3,1,1,1,1,1,1,2,1,2,2,2,2,10,1,3,10,1,1,1,1,23,3,4,1,3,3,1,3,1,3,1,7,1,1,1,2,3,1,1,1,1,1,2,1,2,1,1,1,3,1,1,1,1,1,2,32,5,3,1,1,1,1,1,1,1,1,1,1,1,1,1,4,2,1,1,1,1,4,5,1,2,2,1,3,1,1,5,2,1,1,1,1,2,1,1,1,3,1,2,1,1,3,1,1,3,1,1,1,1,1,1,4,1,2,1,1,1,1,1,2,1,1,1,1,1,1,2,1,1,1,1,2,1,2,1,1,3,1,2,5,6,1,13,1,17,1,1,1,1,2,5,1,2,1,1,6,3,1,1,1,1,1,5,1,1,1,3,2,3,1,1,2,2,1,3,1,37,2,1,2,1,2,4,6,3,2,1,1,1,1,4,1,1,3,1,1,5,1,1,1,4,1,1,1,1,4,1,5,2,2,1,1,3,3,1,2,1,1,1,1,1,1,1,1,1,1,1,3,1,1,1,4,1,7,1,1,1,3,1,4,1,2,5,1,2,2,1,1,1,3,1,1,4,1,5,1,1,1,1,2,1,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1,1,1,1,1,1,1,1,3,1,1,2,1,1,7,2,1,1,2,2,2,1,4,1,1,1,1,1,2,1,1,6,1,2,1,13,13,1,3,1,1,1,2,2,1,1,2,2,1,3,8,1,1,3,1,1,1,2,2,4,3,1,2,1,1,4,1,5,3,3,1,4,3,1,3,2,2,5,1,2,3,1,1,1,1,2,1,2,1,1,1,5,1,2,1,3,2,1,6,1,7,7,1,1,1,1,1,6,1,2,3,1,11,1,1,1,4,1,5,1,1,1,1,1,3,1,1,1,1,1,1,1,2,2,1,3,3,1,9,1,2,1,1,6,1,1,1,1,1,2,1,3,1,1,1,1,2,1,3,1,1,1,1,1,1,7,5,1,1,1,4,1,1,1,1,1,3,1,1,2,6,2,7,3,1,6,1,1,1,2,2,1,1,1,3,1,4,14,2,1,1,2,1,6,1,1,2,3,2,1,1,1,6,1,4,1,2,16,1,1,1,29,5,1,1,1,1,1,3,2,12,2,1,1,1,1,1,2,1,3,1,1,2,1,2,1,1,1,1,4,2,2,1,2,25,1,2,1,1,3,1,1,1,1,3,7,1,1,1,1,4,1,5,1,1,1,1,1,2,1,1,2,1,1,1,4,1,1,1,17,1,1,1,2,2,1,1,3,1,2,1,3,3,9,3,1,1,1,8,4,1,1,3,2,1,1,1,1,1,1,1,1,6,3,17,1,1,1,1,2,2,2,1,1,3,1,1,1,1,4,2,2,1,3,2,1,13,2,1,1,1,1,6,5,5,1,7,1,1,2,1,1,2,4,1,2,1,1,8,9,1,1,2,1,1,1,1,1,1,1,7,1,1,20,1,1,1,3,5,1,2,2,1,1,2,1,1,1,1,2,1,1,1,6,1,3,1,1,2,4,1,5,1,1,1,3,7,7,1,1,1,1,23,1,1,1,1,2,3,2,2,1,1,1,2,1,1,2,1,7,1,1,1,2,1,1,1,20,1,5,2,2,2,1,1,1,3,4,1,1,2,18,2,5,1,1,1,3,2,1,1,1,1,1,1,5,4,1,11,1,1,2,5,2,14,1,1,1,1,1,1,1,1,1,3,1,2,1,2,1,1,1,1,1,1,1,11,1,1,1,3,1,1,2,3,1,1,1,1,1,4,1,1,1,1,3,1,3,1,1,1,1,91,5,1,1,1,1,1,2,1,1,15,1,25,3,6,1,8,1,1,2,1,1,3,1,1,1,1,2,2,1,1,10,1,1,1,2,1,1,1,1,2,2,1,1,1,3,1,2,1,1,1,1,1,2,3,1,1,1,1,1,1,2,1,1,1,1,2,1,2,2,1,1,1,2,1,1,3,1,2,1,1,2,7,1,1,1,1,1,1,4,2,2,3,1,1,1,5,4,1,1,1,1,1,1,1,1,1,1,1,1,4,1,1,1,10,4,1,1,1,1,1,3,1,1,2,2,1,1,4,2,1,1,1,1,1,2,2,16,1,1,2,1,3,1,1,1,2,1,1,7,1,1,1,4,1,2,1,1,3,4,2,1,1,1,1,7,1,2,1,7,1,2,1,1,2,1,2,1,1,1,7,1,1,1,1,3,1,1,6,1,1,1,1,3,1,1,2,13,1,1,1,1,1,1,1,13,1,2,1,1,1,4,2,1,6,1,1,4,1,3,1,1,1,1,6,1,1,4,3,3,1,3,1,1,9,1,1,3,1,1,1,1,1,5,1,1,1,1,4,4,1,1,1,1,9,1,1,1,3,2,3,2,1,1,1,3,1,2,2,1,1,3,2,1,1,1,7,1,1,1,1,1,1,1,1,2,3,3,5,1,1,1,1,1,2,1,1,1,6,1,2,2,1,5,1,1,1,2,2,1,1,2,4,1,4,1,5,1,8,1,1,2,1,2,6,1,1,1,1,2,1,2,7,1,1,1,1,2,1,1,1,2,1,1,3,1,3,1,3,2,1,1,2,3,2,1,1,4,1,1,1,3,1,3,3,2,1,2,1,2,6,1,1,1,1,2,3,3,1,1,1,1,2,2,4,2,7,1,2,1,2,1,7,1,2,3,1,1,1,7,2,6,14,1,1,6,17,1,4,4,1,1,1,1,10,4,5,1,1,3,1,1,1,1,1,1,1,7,6,1,3,1,1,1,1,1,1,1,2,1,2,2,2,3,1,1,1,1,1,2,1,1,5,1,1,1,1,1,1,1,1,2,3,1,1,1,2,1,1,1,1,5,2,1,1,1,1,1,3,5,1,2,2,1,1,2,1,1,3,1,1,2,1,7,1,1,1,1,1,1,2,1,1,77,4,1,2,1,1,1,6,8,1,1,1,3,1,1,3,16,1,1,2,1,1,7,1,1,2,1,2,2,2,1,6,1,1,1,1,1,1,1,1,1,1,1,2,6,2,1],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":1.97802197802198,"backgroundColor":"black","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+  
+
+</div>
+
+          </div>
+        </div>
+        <div class="row site-footer">
+          <div class="col-md-12">
+            <div class="row">
+  <div class="col-md-12 footer-title">
+    <h2>
+      
+      <a href=""> Tiffany&#39;s Data Science Blog </a>
+      
+    </h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 footer-menu">
+      <a href="/">Home </a>
+      
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="social-media-block-footer">
+      
+      
+      
+      
+      
+      <a href="mailto:tgonza75@lakers.mercyhurst.edu" data-animate-hover="pulse" class="email">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+      
+      
+      
+      <a href="https://github.com/tgonza75" data-animate-hover="pulse">
+        <i class="fa fa-github"></i>
+      </a>
+      
+
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://tgonza75.netlify.com/js/jquery.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/bootstrap.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/jquery.cookie.js"> </script>
+<script src="https://tgonza75.netlify.com/js/ekko-lightbox.js"></script>
+<script src="https://tgonza75.netlify.com/js/jquery.scrollTo.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/masonry.pkgd.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/owl.carousel.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/front.js"></script>
+
+  </body>
+</html>

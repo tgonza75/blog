@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
-    <lastBuildDate>Fri, 29 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tgonza75.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Dplyr</title>
       <link>https://tgonza75.netlify.com/tags/dplyr/</link>
-      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://tgonza75.netlify.com/tags/dplyr/</guid>
       <description></description>
@@ -49,11 +49,74 @@
     </item>
     
     <item>
+      <title>Gutenbergr</title>
+      <link>https://tgonza75.netlify.com/tags/gutenbergr/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/tags/gutenbergr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Lahman</title>
       <link>https://tgonza75.netlify.com/tags/lahman/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://tgonza75.netlify.com/tags/lahman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reshape2</title>
+      <link>https://tgonza75.netlify.com/tags/reshape2/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/tags/reshape2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stringr</title>
+      <link>https://tgonza75.netlify.com/tags/stringr/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/tags/stringr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tidytext</title>
+      <link>https://tgonza75.netlify.com/tags/tidytext/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/tags/tidytext/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tm</title>
+      <link>https://tgonza75.netlify.com/tags/tm/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/tags/tm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wordcloud</title>
+      <link>https://tgonza75.netlify.com/tags/wordcloud/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/tags/wordcloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wordcloud2</title>
+      <link>https://tgonza75.netlify.com/tags/wordcloud2/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/tags/wordcloud2/</guid>
       <description></description>
     </item>
     

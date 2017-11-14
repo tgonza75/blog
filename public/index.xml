@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
-    <lastBuildDate>Fri, 29 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tgonza75.netlify.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WordCloud</title>
+      <link>https://tgonza75.netlify.com/post/wordcloud/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/post/wordcloud/</guid>
+      <description>IntroductionA wordcloud is a weighted list, in visual design. It is an image of words put together, and the size of each word depends on it’s frequency, whether it be in a book or an article. In this post, you will learn how to use a playwright from the Gutenberg database, to make a wordcloud of the most frequently used words in the book ‘Peter Pan’.</description>
+    </item>
     
     <item>
       <title>Dashboard</title>
