@@ -1,0 +1,83 @@
+---
+title: WordCloud
+author: Tiffany Gonzalez
+date: '2017-11-14'
+categories:
+  - R
+tags:
+  - gutenbergr
+  - dplyr
+  - tidytext
+  - tm
+  - wordcloud
+  - wordcloud2
+  - stringr
+  - reshape2
+---
+
+# Introduction
+
+### A wordcloud is a weighted list, in visual design. It is an image of words put together, and the size of each word depends on it's frequency, whether it be in a book or an article. In this post, you will learn how to use a playwright from the Gutenberg database, to make a wordcloud of the most frequently used words in the book 'Peter Pan'.
+
+We first need to import our libraries we will be using:
+
+```{r setup, include=FALSE}
+library(tidytext)
+library(gutenbergr)
+library(stringr)
+library(dplyr)
+library(wordcloud)
+library(wordcloud2)
+library(reshape2)
+library(knitr)
+```
+
+Since Gutenberg has a huge list of novels within, and for this post, we just want to work with 1 single novel, Peter Pan, we can run the following code to detect the exat book we are looking for:
+
+```{r}
+gutenberg_works(str_detect(title,'Peter Pan'))
+
+peter_pan<-gutenberg_download(39755)
+```
+
+
+Next, we want to split apart each line of text into words. We can use the function unnest\_tokens() to do so:
+
+```{r}
+words_df<-peter_pan%>%
+  unnest_tokens(word,text)
+
+words_df
+```
+
+We also want to get rid of any common words, such as "a","the","and", these are called stop\_words. To delete these from showing our wordloud, we will run the following:
+
+```{r}
+words_df<-words_df%>%
+  filter(!word %in% stop_words$word)
+
+words_df
+```
+
+Next, we want to count how many times each word comes up within the novel... To figure this out, we will group by each word and then count that word to get its frequency:
+
+```{r}
+word_freq<-words_df%>%
+  group_by(word)%>%
+  summarize(count=n())
+
+word_freq
+```
+
+Finally, it's time to create our wordcloud! We will use a minimum frequency of 8 times a word has to appear, so we can depict a good wordcloud.
+
+```{r}
+wordcloud(word_freq$word,word_freq$count,min.freq=8)
+```
+
+One final decision, depending on your personality...We can use the wordcloud2 package to make this a little bit more colorful and pretty.
+
+```{r}
+wordcloud2(word_freq,background='black')
+```
+
