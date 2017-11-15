@@ -13,6 +13,7 @@ tags:
   - wordcloud2
   - stringr
   - reshape2
+image: img/words.jpg
 ---
 
 # Introduction
