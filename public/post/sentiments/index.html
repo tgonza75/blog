@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+ <title>Text Mining with Sentiments</title>
+
+
+
+<meta name="description" content="Describe your website">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+
+<link rel="stylesheet" href="https://tgonza75.netlify.com/css/bootstrap.min.css">
+<link rel="stylesheet" id="ct-tracks-google-fonts-css" href="//fonts.googleapis.com/css?family=Raleway%3A400%2C700&amp;subset=latin%2Clatin-ext&amp;ver=4.7.2" type="text/css" media="all">
+<link rel="stylesheet" href="https://tgonza75.netlify.com/css/font-awesome.min.css">
+
+<link href="https://tgonza75.netlify.com/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+<link href="https://tgonza75.netlify.com/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://tgonza75.netlify.com/img/favicon.png">
+
+
+</head>
+  <body>
+    <div id="root">
+      <div class="container-fluid">
+        <div class="row site-header">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12 top-navigation">
+                <div class="row">
+  <div class="col-sm-6">
+    <div class="categories-block">
+      <a href="" class="track-categories"></a>
+      
+      <a href="/categories/r">r</a>
+      
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="social-media-block">
+
+      
+      
+      
+      
+      
+      <a href="mailto:tgonza75@lakers.mercyhurst.edu" data-animate-hover="pulse" class="email">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+      
+      
+      
+      <a href="https://github.com/tgonza75" data-animate-hover="pulse">
+        <i class="fa fa-github"></i>
+      </a>
+      
+
+    </div>
+  </div>
+</div>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 header col-md-offset-1">
+                <div class="row">
+  <div class="col-md-6">
+    <div class="title-info">
+      
+      <a href=""> Tiffany&#39;s Data Science Blog </a>
+      
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="menu">
+      <a href="/">Home </a>
+      
+    </div>
+  </div>
+
+</div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 main-content col-md-offset-1">
+            
+
+<div class="col-md-12 entry">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entry-meta">
+        November 14
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entry-header">
+       Text Mining with Sentiments
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="entry-sidebar">
+        <div class="entry-sidebar-title">CATEGORIES</div>
+        
+        <div class="entry-categories">
+          <a href="/categories/r">r</a>
+        </div>
+        
+
+        <div class="entry-sidebar-title">Tags</div>
+        
+        <div class="entry-tags">
+          <a href="/tags/dplyr">dplyr</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/flexdashboard">flexdashboard</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/ggiraph">ggiraph</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/ggplot2">ggplot2</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/gutenbergr">gutenbergr</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/lahman">lahman</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/reshape2">reshape2</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/stringr">stringr</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/tidytext">tidytext</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/tm">tm</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/wordcloud">wordcloud</a>
+        </div>
+        
+        <div class="entry-tags">
+          <a href="/tags/wordcloud2">wordcloud2</a>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="entry-content">
+        <p>In this post we will be comparing two graphs, a graph with positive (sentiment) words, and one with negative. We will be using the gutenbergr package in R, but this time we will be dealing with the book Dracula. First let’s import the packages we will be working with:</p>
+<p>To get our data cleaned up and ready to work with sentiments, we will do the following:</p>
+<pre class="r"><code>#Dracula is number 345 in the gutenbergr database
+dracula&lt;-gutenberg_download(345)</code></pre>
+<pre><code>## Determining mirror for Project Gutenberg from http://www.gutenberg.org/robot/harvest</code></pre>
+<pre><code>## Using mirror http://aleph.gutenberg.org</code></pre>
+<pre class="r"><code># Strip each word from the text
+dracula_words&lt;-dracula%&gt;%
+  unnest_tokens(word,text)
+
+#The gutenberg id column is unnecessary, so remove it
+dracula_words$gutenberg_id&lt;-NULL</code></pre>
+<p>Bing is a sentiment set that provides a list of words and classifies each word as positive, or negative. Let’s first bring ‘bing’ to a data frame and inner join the words and bing, as to classify each word:</p>
+<pre class="r"><code>bing&lt;-get_sentiments(&#39;bing&#39;)
+
+dracula_words&lt;-inner_join(dracula_words,bing)</code></pre>
+<pre><code>## Joining, by = &quot;word&quot;</code></pre>
+<pre class="r"><code>dracula_words</code></pre>
+<pre><code>## # A tibble: 10,046 x 2
+##         word sentiment
+##        &lt;chr&gt;     &lt;chr&gt;
+##  1       beg  negative
+##  2 wonderful  positive
+##  3   correct  positive
+##  4  splendid  positive
+##  5     noble  positive
+##  6    pretty  positive
+##  7      good  positive
+##  8      good  positive
+##  9    useful  positive
+## 10    struck  negative
+## # ... with 10,036 more rows</code></pre>
+<div id="positive-sentiments" class="section level2">
+<h2>Positive Sentiments</h2>
+<p>Let’s first build a graph based on only the positive sentiment words:</p>
+<pre class="r"><code>dracula_pos&lt;-dracula_words%&gt;%
+  filter(sentiment==&#39;positive&#39;)%&gt;%
+  group_by(word)%&gt;%
+  summarize(count=n(),sentiment=first(sentiment))%&gt;% #groups each word, which is positive (sentiment), creates 3 columns
+  arrange(count)%&gt;%
+  top_n(10, wt=count)   # return top 10 records according to some column, in this case, count column
+
+dracula_pos</code></pre>
+<pre><code>## # A tibble: 10 x 3
+##      word count sentiment
+##     &lt;chr&gt; &lt;int&gt;     &lt;chr&gt;
+##  1  sweet    66  positive
+##  2  ready    71  positive
+##  3 better    77  positive
+##  4   love    84  positive
+##  5  right    99  positive
+##  6   work   146  positive
+##  7  great   183  positive
+##  8   well   245  positive
+##  9   good   258  positive
+## 10   like   292  positive</code></pre>
+<p>We then want to classify each word in the ‘word’ column as a factor, not a character and store it back into the data frame we have been working with..</p>
+<pre class="r"><code>class(dracula_pos$word)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>dracula_pos$word&lt;-factor(dracula_pos$word,levels=dracula_pos$word)</code></pre>
+<p>Finally, we will graph our positive sentiments</p>
+<pre class="r"><code>ggplot()+
+  geom_bar(data=dracula_pos,aes(x=word,y=count),stat=&#39;identity&#39;)+
+  coord_flip()</code></pre>
+<p><img src="/post/sentiments_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="negative-sentiments" class="section level2">
+<h2>Negative Sentiments</h2>
+<p>We will now use the same code as above, but using the negative words. We won’t include the word ‘miss’ , because that is not used as a negative word but rather a prefix to a name.</p>
+<pre class="r"><code>dracula_neg&lt;-dracula_words%&gt;%
+  filter(sentiment==&#39;negative&#39;)%&gt;%
+  group_by(word)%&gt;%
+  summarize(count=n(),sentiment=first(sentiment))%&gt;% 
+  arrange(count)%&gt;%
+  filter(word != &#39;miss&#39;)%&gt;%
+  top_n(10, wt=count) 
+
+tail(dracula_neg, n=20)</code></pre>
+<pre><code>## # A tibble: 10 x 3
+##        word count sentiment
+##       &lt;chr&gt; &lt;int&gt;     &lt;chr&gt;
+##  1     hard    49  negative
+##  2  trouble    53  negative
+##  3     fell    59  negative
+##  4     dark    77  negative
+##  5  strange    90  negative
+##  6    death    94  negative
+##  7 terrible   100  negative
+##  8     dead   109  negative
+##  9     fear   137  negative
+## 10     poor   193  negative</code></pre>
+<pre class="r"><code>dracula_neg$word&lt;-factor(dracula_neg$word,levels=dracula_neg$word)
+
+ggplot()+
+  geom_bar(data=dracula_neg,aes(x=word,y=count),stat=&#39;identity&#39;)+
+  coord_flip()</code></pre>
+<p><img src="/post/sentiments_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Now we are ready to combine the graphs into 1.</p>
+<pre class="r"><code>dracula_comp&lt;-rbind(dracula_pos, dracula_neg) #rbind allows you to put one graph on top of other.. You can still see which words are positive and negative</code></pre>
+<p>And time to plot!</p>
+<pre class="r"><code>ggplot()+
+  geom_bar(data=dracula_comp,aes(x=word,y=count, fill=sentiment, color = sentiment),stat=&#39;identity&#39;)+
+  facet_wrap(~sentiment, scales = &#39;free_y&#39;)+      #what column disinguishes the 2 groups...in this case, the sentiment column
+  coord_flip()+                                       #scales = &#39;free_y&#39; -&gt; splits the y axis into the correct graph
+  scale_fill_manual(values=c(&#39;#170b42&#39;,&#39;#10e0f5&#39;))+   #first # is negative color, second is positive                                             
+  scale_color_manual(values=c(&#39;#10e0f5&#39;,&#39;#170b42&#39;))</code></pre>
+<p><img src="/post/sentiments_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+  
+
+</div>
+
+          </div>
+        </div>
+        <div class="row site-footer">
+          <div class="col-md-12">
+            <div class="row">
+  <div class="col-md-12 footer-title">
+    <h2>
+      
+      <a href=""> Tiffany&#39;s Data Science Blog </a>
+      
+    </h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 footer-menu">
+      <a href="/">Home </a>
+      
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="social-media-block-footer">
+      
+      
+      
+      
+      
+      <a href="mailto:tgonza75@lakers.mercyhurst.edu" data-animate-hover="pulse" class="email">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+      
+      
+      
+      <a href="https://github.com/tgonza75" data-animate-hover="pulse">
+        <i class="fa fa-github"></i>
+      </a>
+      
+
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://tgonza75.netlify.com/js/jquery.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/bootstrap.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/jquery.cookie.js"> </script>
+<script src="https://tgonza75.netlify.com/js/ekko-lightbox.js"></script>
+<script src="https://tgonza75.netlify.com/js/jquery.scrollTo.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/masonry.pkgd.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/owl.carousel.min.js"></script>
+<script src="https://tgonza75.netlify.com/js/front.js"></script>
+
+  </body>
+</html>

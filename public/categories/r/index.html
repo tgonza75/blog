@@ -113,22 +113,27 @@
 
 <div class="row content">
   
-    <div class="col-md-12 content-excerpt">
-      
+  <div class="col-md-6 content-excerpt">
+    
       <div class="row">
         <div class="col-md-12">
           <div class="row content-date">
             November 14
           </div>
           <div class="row content-title">
-            <h2> <a href="https://tgonza75.netlify.com/post/wordcloud/ "> WordCloud </a> </h2>
+            <h2> <a href="https://tgonza75.netlify.com/post/sentiments/ "> Text Mining with Sentiments </a> </h2>
           </div>
           <div class="row content-summary">
-            <p> IntroductionA wordcloud is a weighted list, in visual design. It is an image of words put together, and the size of each word depends on it’s frequency, whether it be in a book or an article. In this post, you will learn how to use a playwright from the Gutenberg database, to make a wordcloud of the most frequently used words in the book ‘Peter Pan’. </p>
-            <a class="more-link" href="https://tgonza75.netlify.com/post/wordcloud/ "> READ THE POST </a>
+            <p> In this post we will be comparing two graphs, a graph with positive (sentiment) words, and one with negative. We will be using the gutenbergr package in R, but this time we will be dealing with the book Dracula. First let’s import the packages we will be working with:
+To get our data cleaned up and ready to work with sentiments, we will do the following:
+#Dracula is number 345 in the gutenbergr databasedracula&lt;-gutenberg_download(345)## Determining mirror for Project Gutenberg from http://www. </p>
+            <a class="more-link" href="https://tgonza75.netlify.com/post/sentiments/ "> READ THE POST </a>
           </div>
         </div>
       </div>
+    </div>
+    
+    <div class="col-md-6 content-image" style="background-image: url(/img/barplot.png)">
     </div>
     
   </div>
@@ -137,25 +142,21 @@
 
   <div class="row content">
     
-    <div class="col-md-6 content-image" style="background-image: url(/img/dashboard.jpg)">
-    </div>
-    
 
     
-    <div class="col-md-6 content-excerpt">
-      
+      <div class="col-md-12 content-excerpt">
+        
         <div class="row">
           <div class="col-md-12">
             <div class="content-date">
-              September 29
+              November 14
             </div>
             <div class="content-title">
-              <h2> <a href="https://tgonza75.netlify.com/post/dashboard/ "> Dashboard </a> </h2>
+              <h2> <a href="https://tgonza75.netlify.com/post/wordcloud/ "> WordCloud </a> </h2>
             </div>
             <div class="content-summary">
-              <p> Dashboards are a great way to organize and present information that is easy to read on one given page or site. A dashboard is an interactive tool that allows the user to visualize large amounts of data.To set up our dashboard we need to bring in our packages, and this time we will be adding the new package to set the dashboard up called, flexdashboard.
-The first graph shown is a scatterplot: </p>
-              <a class="more-link" href="https://tgonza75.netlify.com/post/dashboard/ "> READ THE POST </a>
+              <p> IntroductionA wordcloud is a weighted list, in visual design. It is an image of words put together, and the size of each word depends on it’s frequency, whether it be in a book or an article. In this post, you will learn how to use a playwright from the Gutenberg database, to make a wordcloud of the most frequently used words in the book ‘Peter Pan’. </p>
+              <a class="more-link" href="https://tgonza75.netlify.com/post/wordcloud/ "> READ THE POST </a>
             </div>
           </div>
         </div>
@@ -175,87 +176,145 @@ The first graph shown is a scatterplot: </p>
             September 29
           </div>
           <div class="row content-title">
-            <h2> <a href="https://tgonza75.netlify.com/post/career-homeruns/ "> Fun With Scatterplot </a> </h2>
+            <h2> <a href="https://tgonza75.netlify.com/post/dashboard/ "> Dashboard </a> </h2>
           </div>
           <div class="row content-summary">
-            <p> In this post, we are going to learn how to create an interactive scatterplot. First we need to bring the packages we will be using into R.
-library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(ggiraph)As you can see, we are going to use one new package we have yet to look at, and that would be the ggiraph package. </p>
-            <a class="more-link" href="https://tgonza75.netlify.com/post/career-homeruns/ "> READ THE POST </a>
+            <p> Dashboards are a great way to organize and present information that is easy to read on one given page or site. A dashboard is an interactive tool that allows the user to visualize large amounts of data.To set up our dashboard we need to bring in our packages, and this time we will be adding the new package to set the dashboard up called, flexdashboard.
+The first graph shown is a scatterplot: </p>
+            <a class="more-link" href="https://tgonza75.netlify.com/post/dashboard/ "> READ THE POST </a>
           </div>
         </div>
       </div>
     </div>
+    
+    <div class="col-md-6 content-image" style="background-image: url(/img/dashboard.jpg)">
+    </div>
+    
+  </div>
+  
+    
+
+  <div class="row content">
     
     <div class="col-md-6 content-image" style="background-image: url(/img/world.jpg)">
     </div>
     
-  </div>
-  
+
+    
+    <div class="col-md-6 content-excerpt">
+      
+        <div class="row">
+          <div class="col-md-12">
+            <div class="content-date">
+              September 29
+            </div>
+            <div class="content-title">
+              <h2> <a href="https://tgonza75.netlify.com/post/career-homeruns/ "> Fun With Scatterplot </a> </h2>
+            </div>
+            <div class="content-summary">
+              <p> In this post, we are going to learn how to create an interactive scatterplot. First we need to bring the packages we will be using into R.
+library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(ggiraph)As you can see, we are going to use one new package we have yet to look at, and that would be the ggiraph package. </p>
+              <a class="more-link" href="https://tgonza75.netlify.com/post/career-homeruns/ "> READ THE POST </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
     
 
-  <div class="row content">
+<div class="row content">
+  
+  <div class="col-md-6 content-excerpt">
+    
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row content-date">
+            September 26
+          </div>
+          <div class="row content-title">
+            <h2> <a href="https://tgonza75.netlify.com/post/creating-a-bar-chart/ "> Creating a Bar Chart </a> </h2>
+          </div>
+          <div class="row content-summary">
+            <p> To begin, let’s bring in the packages needed to create the following bar chart.
+library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)Next, let’s gather the information that we want to see displayed on the bar chart. Let’s work with the Team table from the Lahman database. </p>
+            <a class="more-link" href="https://tgonza75.netlify.com/post/creating-a-bar-chart/ "> READ THE POST </a>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <div class="col-md-6 content-image" style="background-image: url(/img/wordcloud.png)">
     </div>
     
-
-    
-    <div class="col-md-6 content-excerpt">
-      
-        <div class="row">
-          <div class="col-md-12">
-            <div class="content-date">
-              September 26
-            </div>
-            <div class="content-title">
-              <h2> <a href="https://tgonza75.netlify.com/post/creating-a-bar-chart/ "> Creating a Bar Chart </a> </h2>
-            </div>
-            <div class="content-summary">
-              <p> To begin, let’s bring in the packages needed to create the following bar chart.
-library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)Next, let’s gather the information that we want to see displayed on the bar chart. Let’s work with the Team table from the Lahman database. </p>
-              <a class="more-link" href="https://tgonza75.netlify.com/post/creating-a-bar-chart/ "> READ THE POST </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    
-    
-
-<div class="row content">
+  </div>
   
-  <div class="col-md-6 content-excerpt">
     
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row content-date">
-            September 25
-          </div>
-          <div class="row content-title">
-            <h2> <a href="https://tgonza75.netlify.com/post/working-with-a-histogram/ "> Building a Histogram </a> </h2>
-          </div>
-          <div class="row content-summary">
-            <p> This post will be showing you how to create a Histogram. A histogram is a graphical display of data that uses bars of differet heights. A histogram is similar to a bar chart, however it can group numbers into ranges. To begin, we need to load the packages that will be needed to creat the histogram, as follows:
-library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)To start we need the information we will be working with. </p>
-            <a class="more-link" href="https://tgonza75.netlify.com/post/working-with-a-histogram/ "> READ THE POST </a>
-          </div>
-        </div>
-      </div>
-    </div>
+
+  <div class="row content">
     
     <div class="col-md-6 content-image" style="background-image: url(/img/coding3.jpg)">
     </div>
     
-  </div>
-  
+
+    
+    <div class="col-md-6 content-excerpt">
+      
+        <div class="row">
+          <div class="col-md-12">
+            <div class="content-date">
+              September 25
+            </div>
+            <div class="content-title">
+              <h2> <a href="https://tgonza75.netlify.com/post/working-with-a-histogram/ "> Building a Histogram </a> </h2>
+            </div>
+            <div class="content-summary">
+              <p> This post will be showing you how to create a Histogram. A histogram is a graphical display of data that uses bars of differet heights. A histogram is similar to a bar chart, however it can group numbers into ranges. To begin, we need to load the packages that will be needed to creat the histogram, as follows:
+library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)To start we need the information we will be working with. </p>
+              <a class="more-link" href="https://tgonza75.netlify.com/post/working-with-a-histogram/ "> READ THE POST </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
     
 
-  <div class="row content">
+<div class="row content">
+  
+  <div class="col-md-6 content-excerpt">
+    
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row content-date">
+            September 20
+          </div>
+          <div class="row content-title">
+            <h2> <a href="https://tgonza75.netlify.com/post/new-york-yankees-baseball-team/ "> A look at building queries, using the New York Yankees </a> </h2>
+          </div>
+          <div class="row content-summary">
+            <p> To begin our coding, we first need to download the packages in RStudio. You can click tools at the top navigation bar, then click install packages. The two packages needed to run the following query are: Lahman and dplyr. Once installed, bring the packages to use by typing library and the package name as follows:
+library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionOnce these are brought in, we can now use the Lahman baseball database. </p>
+            <a class="more-link" href="https://tgonza75.netlify.com/post/new-york-yankees-baseball-team/ "> READ THE POST </a>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <div class="col-md-6 content-image" style="background-image: url(/img/yankees.jpg)">
     </div>
     
+  </div>
+  
+    
+
+  <div class="row content">
+    
+    <div class="col-md-6 content-image" style="background-image: url(/img/babe.jpg)">
+    </div>
+    
 
     
     <div class="col-md-6 content-excerpt">
@@ -266,12 +325,12 @@ library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The f
               September 20
             </div>
             <div class="content-title">
-              <h2> <a href="https://tgonza75.netlify.com/post/new-york-yankees-baseball-team/ "> A look at building queries, using the New York Yankees </a> </h2>
+              <h2> <a href="https://tgonza75.netlify.com/post/babe-ruth/ "> Babe Ruth </a> </h2>
             </div>
             <div class="content-summary">
-              <p> To begin our coding, we first need to download the packages in RStudio. You can click tools at the top navigation bar, then click install packages. The two packages needed to run the following query are: Lahman and dplyr. Once installed, bring the packages to use by typing library and the package name as follows:
-library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionOnce these are brought in, we can now use the Lahman baseball database. </p>
-              <a class="more-link" href="https://tgonza75.netlify.com/post/new-york-yankees-baseball-team/ "> READ THE POST </a>
+              <p> Now that you have, hopefully, read the first post… You can now have a better understanding of how writing a code. Let’s try a new query to run. Again, let’s bring our packages in with library.
+library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionNow suppose we want to just see the homerun’s Babe Ruth has had during his time on the New York Yankees. </p>
+              <a class="more-link" href="https://tgonza75.netlify.com/post/babe-ruth/ "> READ THE POST </a>
             </div>
           </div>
         </div>
@@ -291,18 +350,18 @@ library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The f
             September 20
           </div>
           <div class="row content-title">
-            <h2> <a href="https://tgonza75.netlify.com/post/babe-ruth/ "> Babe Ruth </a> </h2>
+            <h2> <a href="https://tgonza75.netlify.com/post/working-on-arranging/ "> Time for Arranging </a> </h2>
           </div>
           <div class="row content-summary">
-            <p> Now that you have, hopefully, read the first post… You can now have a better understanding of how writing a code. Let’s try a new query to run. Again, let’s bring our packages in with library.
-library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionNow suppose we want to just see the homerun’s Babe Ruth has had during his time on the New York Yankees. </p>
-            <a class="more-link" href="https://tgonza75.netlify.com/post/babe-ruth/ "> READ THE POST </a>
+            <p> Let’s try working with a slightly more intense code. By adding “arrange” we can pick whether we want the most homeruns hit by a player, for instance, to be at the top or bottom of the column… Don’t forget to bring in the packages so we can use them!
+library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionSuppose we want to find every instance of a player hitting more than 50 Homeruns but let’s have players with the most Hr’s at the top! </p>
+            <a class="more-link" href="https://tgonza75.netlify.com/post/working-on-arranging/ "> READ THE POST </a>
           </div>
         </div>
       </div>
     </div>
     
-    <div class="col-md-6 content-image" style="background-image: url(/img/babe.jpg)">
+    <div class="col-md-6 content-image" style="background-image: url(/img/coding1.jpg)">
     </div>
     
   </div>
@@ -311,7 +370,7 @@ library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The f
 
   <div class="row content">
     
-    <div class="col-md-6 content-image" style="background-image: url(/img/coding1.jpg)">
+    <div class="col-md-6 content-image" style="background-image: url(/img/coding.jpg)">
     </div>
     
 
@@ -324,12 +383,12 @@ library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The f
               September 20
             </div>
             <div class="content-title">
-              <h2> <a href="https://tgonza75.netlify.com/post/working-on-arranging/ "> Time for Arranging </a> </h2>
+              <h2> <a href="https://tgonza75.netlify.com/post/aggregation-time/ "> Working on Aggregation </a> </h2>
             </div>
             <div class="content-summary">
-              <p> Let’s try working with a slightly more intense code. By adding “arrange” we can pick whether we want the most homeruns hit by a player, for instance, to be at the top or bottom of the column… Don’t forget to bring in the packages so we can use them!
-library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionSuppose we want to find every instance of a player hitting more than 50 Homeruns but let’s have players with the most Hr’s at the top! </p>
-              <a class="more-link" href="https://tgonza75.netlify.com/post/working-on-arranging/ "> READ THE POST </a>
+              <p> Lastly, working with both the Lahman database and dplyr, let’s aggregate! To do so, we can add “group_by” and “summarize” to our codes… First things first:
+library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionTime to put the new functions to practice. Let’s find the career HR totals for all players but limit the list to career total of 600 or more. </p>
+              <a class="more-link" href="https://tgonza75.netlify.com/post/aggregation-time/ "> READ THE POST </a>
             </div>
           </div>
         </div>
@@ -337,34 +396,6 @@ library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The f
 
     </div>
     
-    
-
-<div class="row content">
-  
-  <div class="col-md-6 content-excerpt">
-    
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row content-date">
-            September 20
-          </div>
-          <div class="row content-title">
-            <h2> <a href="https://tgonza75.netlify.com/post/aggregation-time/ "> Working on Aggregation </a> </h2>
-          </div>
-          <div class="row content-summary">
-            <p> Lastly, working with both the Lahman database and dplyr, let’s aggregate! To do so, we can add “group_by” and “summarize” to our codes… First things first:
-library(Lahman)library(dplyr)## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionTime to put the new functions to practice. Let’s find the career HR totals for all players but limit the list to career total of 600 or more. </p>
-            <a class="more-link" href="https://tgonza75.netlify.com/post/aggregation-time/ "> READ THE POST </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-6 content-image" style="background-image: url(/img/coding.jpg)">
-    </div>
-    
-  </div>
-  
     
 
           </div>

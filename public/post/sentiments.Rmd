@@ -1,0 +1,123 @@
+---
+title: Text Mining with Sentiments
+author: Tiffany Gonzalez
+date: '2017-11-14'
+categories:
+  - R
+tags:
+  - gutenbergr
+  - dplyr
+  - tidytext
+  - tm
+  - stringr
+  - ggplot2
+
+image: img/barplot.png
+---
+
+In this post we will be comparing two graphs, a graph with positive (sentiment) words, and one with negative. We will be using the gutenbergr package in R, but this time we will be dealing with the book Dracula. First let's import the packages we will be working with:
+
+```{r setup, include=FALSE}
+library(tidytext)
+library(gutenbergr)
+library(stringr)
+library(dplyr)
+library(ggplot2)
+```
+
+To get our data cleaned up and ready to work with sentiments, we will do the following:
+
+```{r}
+#Dracula is number 345 in the gutenbergr database
+dracula<-gutenberg_download(345)
+
+# Strip each word from the text
+dracula_words<-dracula%>%
+  unnest_tokens(word,text)
+
+#The gutenberg id column is unnecessary, so remove it
+dracula_words$gutenberg_id<-NULL
+```
+
+Bing is a sentiment set that provides a list of words and classifies each word as positive, or negative. Let's first bring 'bing' to a data frame and inner join the words and bing, as to classify each word:
+
+```{r}
+bing<-get_sentiments('bing')
+
+dracula_words<-inner_join(dracula_words,bing)
+
+dracula_words
+```
+
+## Positive Sentiments
+Let's first build a graph based on only the positive sentiment words:
+
+```{r}
+dracula_pos<-dracula_words%>%
+  filter(sentiment=='positive')%>%
+  group_by(word)%>%
+  summarize(count=n(),sentiment=first(sentiment))%>% #groups each word, which is positive (sentiment), creates 3 columns
+  arrange(count)%>%
+  top_n(10, wt=count)   # return top 10 records according to some column, in this case, count column
+
+dracula_pos
+```
+
+We then want to classify each word in the 'word' column as a factor, not a character and store it back into the data frame we have been working with..
+```{r}
+class(dracula_pos$word)
+
+dracula_pos$word<-factor(dracula_pos$word,levels=dracula_pos$word)
+```
+
+Finally, we will graph our positive sentiments
+
+```{r}
+ggplot()+
+  geom_bar(data=dracula_pos,aes(x=word,y=count),stat='identity')+
+  coord_flip()
+```
+
+
+##Negative Sentiments
+
+We will now use the same code as above, but using the negative words. We won't include the word 'miss' , because that is not used as a negative word but rather a prefix to a name. 
+
+```{r}
+dracula_neg<-dracula_words%>%
+  filter(sentiment=='negative')%>%
+  group_by(word)%>%
+  summarize(count=n(),sentiment=first(sentiment))%>% 
+  arrange(count)%>%
+  filter(word != 'miss')%>%
+  top_n(10, wt=count) 
+
+tail(dracula_neg, n=20)
+
+dracula_neg$word<-factor(dracula_neg$word,levels=dracula_neg$word)
+
+ggplot()+
+  geom_bar(data=dracula_neg,aes(x=word,y=count),stat='identity')+
+  coord_flip()
+
+```
+
+Now we are ready to combine the graphs into 1.
+
+```{r}
+dracula_comp<-rbind(dracula_pos, dracula_neg) #rbind allows you to put one graph on top of other.. You can still see which words are positive and negative
+```
+
+And time to plot!
+
+```{r}
+ggplot()+
+  geom_bar(data=dracula_comp,aes(x=word,y=count, fill=sentiment, color = sentiment),stat='identity')+
+  facet_wrap(~sentiment, scales = 'free_y')+      #what column disinguishes the 2 groups...in this case, the sentiment column
+  coord_flip()+                                       #scales = 'free_y' -> splits the y axis into the correct graph
+  scale_fill_manual(values=c('#170b42','#10e0f5'))+   #first # is negative color, second is positive                                             
+  scale_color_manual(values=c('#10e0f5','#170b42'))
+```
+
+
+

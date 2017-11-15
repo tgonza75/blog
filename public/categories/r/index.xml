@@ -13,6 +13,17 @@
     
     
     <item>
+      <title>Text Mining with Sentiments</title>
+      <link>https://tgonza75.netlify.com/post/sentiments/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tgonza75.netlify.com/post/sentiments/</guid>
+      <description>In this post we will be comparing two graphs, a graph with positive (sentiment) words, and one with negative. We will be using the gutenbergr package in R, but this time we will be dealing with the book Dracula. First let’s import the packages we will be working with:
+To get our data cleaned up and ready to work with sentiments, we will do the following:
+#Dracula is number 345 in the gutenbergr databasedracula&amp;lt;-gutenberg_download(345)## Determining mirror for Project Gutenberg from http://www.</description>
+    </item>
+    
+    <item>
       <title>WordCloud</title>
       <link>https://tgonza75.netlify.com/post/wordcloud/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
