@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ggplot2 on Tiffany&#39;s Data Science Blog</title>
-    <link>https://tgonza75.netlify.com/tags/ggplot2/</link>
+    <link>/tags/ggplot2/</link>
     <description>Recent content in Ggplot2 on Tiffany&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
     <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tgonza75.netlify.com/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Text Mining with Sentiments</title>
-      <link>https://tgonza75.netlify.com/post/sentiments/</link>
+      <link>/post/sentiments/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/sentiments/</guid>
+      <guid>/post/sentiments/</guid>
       <description>In this post we will be comparing two graphs, a graph with positive (sentiment) words, and one with negative. We will be using the gutenbergr package in R, but this time we will be dealing with the book Dracula. First let’s import the packages we will be working with:
 To get our data cleaned up and ready to work with sentiments, we will do the following:
 #Dracula is number 345 in the gutenbergr databasedracula&amp;lt;-gutenberg_download(345)## Determining mirror for Project Gutenberg from http://www.</description>
@@ -25,40 +25,40 @@ To get our data cleaned up and ready to work with sentiments, we will do the fol
     
     <item>
       <title>Dashboard</title>
-      <link>https://tgonza75.netlify.com/post/dashboard/</link>
+      <link>/post/dashboard/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/dashboard/</guid>
+      <guid>/post/dashboard/</guid>
       <description>Dashboards are a great way to organize and present information that is easy to read on one given page or site. A dashboard is an interactive tool that allows the user to visualize large amounts of data.To set up our dashboard we need to bring in our packages, and this time we will be adding the new package to set the dashboard up called, flexdashboard.
 The first graph shown is a scatterplot:</description>
     </item>
     
     <item>
       <title>Fun With Scatterplot</title>
-      <link>https://tgonza75.netlify.com/post/career-homeruns/</link>
+      <link>/post/career-homeruns/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/career-homeruns/</guid>
+      <guid>/post/career-homeruns/</guid>
       <description>In this post, we are going to learn how to create an interactive scatterplot. First we need to bring the packages we will be using into R.
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(ggiraph)As you can see, we are going to use one new package we have yet to look at, and that would be the ggiraph package.</description>
     </item>
     
     <item>
       <title>Creating a Bar Chart</title>
-      <link>https://tgonza75.netlify.com/post/creating-a-bar-chart/</link>
+      <link>/post/creating-a-bar-chart/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/creating-a-bar-chart/</guid>
+      <guid>/post/creating-a-bar-chart/</guid>
       <description>To begin, let’s bring in the packages needed to create the following bar chart.
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)Next, let’s gather the information that we want to see displayed on the bar chart. Let’s work with the Team table from the Lahman database.</description>
     </item>
     
     <item>
       <title>Building a Histogram</title>
-      <link>https://tgonza75.netlify.com/post/working-with-a-histogram/</link>
+      <link>/post/working-with-a-histogram/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/working-with-a-histogram/</guid>
+      <guid>/post/working-with-a-histogram/</guid>
       <description>This post will be showing you how to create a Histogram. A histogram is a graphical display of data that uses bars of differet heights. A histogram is similar to a bar chart, however it can group numbers into ranges. To begin, we need to load the packages that will be needed to creat the histogram, as follows:
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)To start we need the information we will be working with.</description>
     </item>

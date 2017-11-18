@@ -2,22 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tiffany&#39;s Data Science Blog</title>
-    <link>https://tgonza75.netlify.com/</link>
+    <link>/</link>
     <description>Recent content on Tiffany&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
-    <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tgonza75.netlify.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Positive vs. Negative Wordcloud</title>
+      <link>/post/comparisonwordcloud/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/comparisonwordcloud/</guid>
+      <description>Comparison CloudThis post is similair to the Text Mining with Sentiments post on my blog. But for this particular one, we will be comparing the positive and negative sentiments, not with bar plots, but with a wordcloud.Let’s first import the packages we will be working with.
+Next let’s clean up our data. Since we have already been through this process I will just make brief notes within the coding.</description>
+    </item>
+    
+    <item>
       <title>Text Mining with Sentiments</title>
-      <link>https://tgonza75.netlify.com/post/sentiments/</link>
+      <link>/post/sentiments/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/sentiments/</guid>
+      <guid>/post/sentiments/</guid>
       <description>In this post we will be comparing two graphs, a graph with positive (sentiment) words, and one with negative. We will be using the gutenbergr package in R, but this time we will be dealing with the book Dracula. First let’s import the packages we will be working with:
 To get our data cleaned up and ready to work with sentiments, we will do the following:
 #Dracula is number 345 in the gutenbergr databasedracula&amp;lt;-gutenberg_download(345)## Determining mirror for Project Gutenberg from http://www.</description>
@@ -25,109 +35,109 @@ To get our data cleaned up and ready to work with sentiments, we will do the fol
     
     <item>
       <title>WordCloud</title>
-      <link>https://tgonza75.netlify.com/post/wordcloud/</link>
+      <link>/post/wordcloud/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/wordcloud/</guid>
+      <guid>/post/wordcloud/</guid>
       <description>IntroductionA wordcloud is a weighted list, in visual design. It is an image of words put together, and the size of each word depends on it’s frequency, whether it be in a book or an article. In this post, you will learn how to use a playwright from the Gutenberg database, to make a wordcloud of the most frequently used words in the book ‘Peter Pan’.</description>
     </item>
     
     <item>
       <title>Dashboard</title>
-      <link>https://tgonza75.netlify.com/post/dashboard/</link>
+      <link>/post/dashboard/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/dashboard/</guid>
+      <guid>/post/dashboard/</guid>
       <description>Dashboards are a great way to organize and present information that is easy to read on one given page or site. A dashboard is an interactive tool that allows the user to visualize large amounts of data.To set up our dashboard we need to bring in our packages, and this time we will be adding the new package to set the dashboard up called, flexdashboard.
 The first graph shown is a scatterplot:</description>
     </item>
     
     <item>
       <title>Fun With Scatterplot</title>
-      <link>https://tgonza75.netlify.com/post/career-homeruns/</link>
+      <link>/post/career-homeruns/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/career-homeruns/</guid>
+      <guid>/post/career-homeruns/</guid>
       <description>In this post, we are going to learn how to create an interactive scatterplot. First we need to bring the packages we will be using into R.
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(ggiraph)As you can see, we are going to use one new package we have yet to look at, and that would be the ggiraph package.</description>
     </item>
     
     <item>
       <title>Creating a Bar Chart</title>
-      <link>https://tgonza75.netlify.com/post/creating-a-bar-chart/</link>
+      <link>/post/creating-a-bar-chart/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/creating-a-bar-chart/</guid>
+      <guid>/post/creating-a-bar-chart/</guid>
       <description>To begin, let’s bring in the packages needed to create the following bar chart.
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)Next, let’s gather the information that we want to see displayed on the bar chart. Let’s work with the Team table from the Lahman database.</description>
     </item>
     
     <item>
       <title>Building a Histogram</title>
-      <link>https://tgonza75.netlify.com/post/working-with-a-histogram/</link>
+      <link>/post/working-with-a-histogram/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/working-with-a-histogram/</guid>
+      <guid>/post/working-with-a-histogram/</guid>
       <description>This post will be showing you how to create a Histogram. A histogram is a graphical display of data that uses bars of differet heights. A histogram is similar to a bar chart, however it can group numbers into ranges. To begin, we need to load the packages that will be needed to creat the histogram, as follows:
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)To start we need the information we will be working with.</description>
     </item>
     
     <item>
       <title>A look at building queries, using the New York Yankees</title>
-      <link>https://tgonza75.netlify.com/post/new-york-yankees-baseball-team/</link>
+      <link>/post/new-york-yankees-baseball-team/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/new-york-yankees-baseball-team/</guid>
+      <guid>/post/new-york-yankees-baseball-team/</guid>
       <description>To begin our coding, we first need to download the packages in RStudio. You can click tools at the top navigation bar, then click install packages. The two packages needed to run the following query are: Lahman and dplyr. Once installed, bring the packages to use by typing library and the package name as follows:
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionOnce these are brought in, we can now use the Lahman baseball database.</description>
     </item>
     
     <item>
       <title>Babe Ruth</title>
-      <link>https://tgonza75.netlify.com/post/babe-ruth/</link>
+      <link>/post/babe-ruth/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/babe-ruth/</guid>
+      <guid>/post/babe-ruth/</guid>
       <description>Now that you have, hopefully, read the first post… You can now have a better understanding of how writing a code. Let’s try a new query to run. Again, let’s bring our packages in with library.
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionNow suppose we want to just see the homerun’s Babe Ruth has had during his time on the New York Yankees.</description>
     </item>
     
     <item>
       <title>Time for Arranging</title>
-      <link>https://tgonza75.netlify.com/post/working-on-arranging/</link>
+      <link>/post/working-on-arranging/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/working-on-arranging/</guid>
+      <guid>/post/working-on-arranging/</guid>
       <description>Let’s try working with a slightly more intense code. By adding “arrange” we can pick whether we want the most homeruns hit by a player, for instance, to be at the top or bottom of the column… Don’t forget to bring in the packages so we can use them!
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionSuppose we want to find every instance of a player hitting more than 50 Homeruns but let’s have players with the most Hr’s at the top!</description>
     </item>
     
     <item>
       <title>Working on Aggregation</title>
-      <link>https://tgonza75.netlify.com/post/aggregation-time/</link>
+      <link>/post/aggregation-time/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/aggregation-time/</guid>
+      <guid>/post/aggregation-time/</guid>
       <description>Lastly, working with both the Lahman database and dplyr, let’s aggregate! To do so, we can add “group_by” and “summarize” to our codes… First things first:
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionTime to put the new functions to practice. Let’s find the career HR totals for all players but limit the list to career total of 600 or more.</description>
     </item>
     
     <item>
       <title>Get in touch</title>
-      <link>https://tgonza75.netlify.com/contact/</link>
+      <link>/contact/</link>
       <pubDate>Sun, 06 Nov 2016 13:00:25 +0530</pubDate>
       
-      <guid>https://tgonza75.netlify.com/contact/</guid>
+      <guid>/contact/</guid>
       <description>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then
 Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to.</description>
     </item>
     
     <item>
       <title>About me</title>
-      <link>https://tgonza75.netlify.com/about/</link>
+      <link>/about/</link>
       <pubDate>Sat, 05 Nov 2016 21:05:33 +0530</pubDate>
       
-      <guid>https://tgonza75.netlify.com/about/</guid>
+      <guid>/about/</guid>
       <description>An sincerity so extremity he additions. Her yet there truth merit. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.
 Received overcame oh sensible so at an. Formed do change merely to county it. Am separate contempt domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too.</description>
     </item>

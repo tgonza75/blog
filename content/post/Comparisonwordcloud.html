@@ -1,0 +1,69 @@
+---
+title: Positive vs. Negative Wordcloud
+author: Tiffany Gonzalez
+date: '2017-11-18'
+categories:
+  - R
+tags:
+  - gutenbergr
+  - dplyr
+  - tidytext
+  - tm
+  - stringr
+  - wordcloud
+  - wordcloud2
+  - reshape2
+
+image: img/compare.jpg
+---
+
+
+
+<div id="comparison-cloud" class="section level2">
+<h2>Comparison Cloud</h2>
+<p>This post is similair to the Text Mining with Sentiments post on my blog. But for this particular one, we will be comparing the positive and negative sentiments, not with bar plots, but with a wordcloud.Let’s first import the packages we will be working with.</p>
+<p>Next let’s clean up our data. Since we have already been through this process I will just make brief notes within the coding.</p>
+<pre class="r"><code>#Dracula is number 345 in gutenbergr database
+dracula&lt;-gutenberg_download(345)
+
+#gutenberg_id number isn&#39;t necessary, so remove it
+dracula$gutenberg_id&lt;-NULL
+
+#extract each word from the text.
+dracula_words&lt;-dracula%&gt;%
+  unnest_tokens(word,text)
+
+#sentiment that provides the list of words, and classifies each as positive or negative
+bing&lt;-get_sentiments(&#39;bing&#39;)
+
+#inner join each word with a positive or negative sentiment
+dracula_words&lt;-inner_join(dracula_words,bing)
+
+dracula_words</code></pre>
+<pre><code>## # A tibble: 10,046 x 2
+##         word sentiment
+##        &lt;chr&gt;     &lt;chr&gt;
+##  1       beg  negative
+##  2 wonderful  positive
+##  3   correct  positive
+##  4  splendid  positive
+##  5     noble  positive
+##  6    pretty  positive
+##  7      good  positive
+##  8      good  positive
+##  9    useful  positive
+## 10    struck  negative
+## # ... with 10,036 more rows</code></pre>
+<p>We will now group each word and count howmany times each word appears… In our code, it is named <code>freq</code> and attach their sentiment as well:</p>
+<pre class="r"><code>dracula_words&lt;-dracula_words%&gt;%
+  group_by(word)%&gt;%
+  summarize(freq=n(),sentiment=first(sentiment))</code></pre>
+<p>Next, we will make our regular wordcloud, which we had done in the Wordcloud post on my blog. This wordcloud will only have words that appear at least 20 times within the novel.</p>
+<pre class="r"><code>wordcloud(dracula_words$word,dracula_words$freq, min.freq=20)</code></pre>
+<p><img src="/post/Comparisonwordcloud_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Now we will work on seperating the wordclouds, into positive and negative. We first should make our word data into rows, and match them up with their sentiment in the next column. To do so, we can make a matrix data frame.</p>
+<pre class="r"><code>dracula_matrix&lt;-acast(dracula_words,word~sentiment,value.var=&#39;freq&#39;,fill=0)</code></pre>
+<p>Finally, we can make our comparison cloud, we will use a dark blue for the negative wordcloud and a light blue for the positive.</p>
+<pre class="r"><code>comparison.cloud(dracula_matrix,colors=c(&#39;#170b42&#39;,&#39;#10e0f5&#39;))</code></pre>
+<p><img src="/post/Comparisonwordcloud_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>

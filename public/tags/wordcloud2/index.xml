@@ -2,22 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordcloud2 on Tiffany&#39;s Data Science Blog</title>
-    <link>https://tgonza75.netlify.com/tags/wordcloud2/</link>
+    <link>/tags/wordcloud2/</link>
     <description>Recent content in Wordcloud2 on Tiffany&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
-    <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tgonza75.netlify.com/tags/wordcloud2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/wordcloud2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Positive vs. Negative Wordcloud</title>
+      <link>/post/comparisonwordcloud/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/comparisonwordcloud/</guid>
+      <description>Comparison CloudThis post is similair to the Text Mining with Sentiments post on my blog. But for this particular one, we will be comparing the positive and negative sentiments, not with bar plots, but with a wordcloud.Let’s first import the packages we will be working with.
+Next let’s clean up our data. Since we have already been through this process I will just make brief notes within the coding.</description>
+    </item>
+    
+    <item>
       <title>WordCloud</title>
-      <link>https://tgonza75.netlify.com/post/wordcloud/</link>
+      <link>/post/wordcloud/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/wordcloud/</guid>
+      <guid>/post/wordcloud/</guid>
       <description>IntroductionA wordcloud is a weighted list, in visual design. It is an image of words put together, and the size of each word depends on it’s frequency, whether it be in a book or an article. In this post, you will learn how to use a playwright from the Gutenberg database, to make a wordcloud of the most frequently used words in the book ‘Peter Pan’.</description>
     </item>
     

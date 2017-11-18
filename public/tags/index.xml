@@ -2,121 +2,121 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tiffany&#39;s Data Science Blog</title>
-    <link>https://tgonza75.netlify.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Tiffany&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
-    <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tgonza75.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dplyr</title>
-      <link>https://tgonza75.netlify.com/tags/dplyr/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      <link>/tags/dplyr/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/dplyr/</guid>
+      <guid>/tags/dplyr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Flexdashboard</title>
-      <link>https://tgonza75.netlify.com/tags/flexdashboard/</link>
+      <link>/tags/flexdashboard/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/flexdashboard/</guid>
+      <guid>/tags/flexdashboard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ggiraph</title>
-      <link>https://tgonza75.netlify.com/tags/ggiraph/</link>
+      <link>/tags/ggiraph/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/ggiraph/</guid>
+      <guid>/tags/ggiraph/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ggplot2</title>
-      <link>https://tgonza75.netlify.com/tags/ggplot2/</link>
+      <link>/tags/ggplot2/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/ggplot2/</guid>
+      <guid>/tags/ggplot2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gutenbergr</title>
-      <link>https://tgonza75.netlify.com/tags/gutenbergr/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      <link>/tags/gutenbergr/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/gutenbergr/</guid>
+      <guid>/tags/gutenbergr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lahman</title>
-      <link>https://tgonza75.netlify.com/tags/lahman/</link>
+      <link>/tags/lahman/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/lahman/</guid>
+      <guid>/tags/lahman/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reshape2</title>
-      <link>https://tgonza75.netlify.com/tags/reshape2/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      <link>/tags/reshape2/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/reshape2/</guid>
+      <guid>/tags/reshape2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stringr</title>
-      <link>https://tgonza75.netlify.com/tags/stringr/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      <link>/tags/stringr/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/stringr/</guid>
+      <guid>/tags/stringr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tidytext</title>
-      <link>https://tgonza75.netlify.com/tags/tidytext/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      <link>/tags/tidytext/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/tidytext/</guid>
+      <guid>/tags/tidytext/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tm</title>
-      <link>https://tgonza75.netlify.com/tags/tm/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      <link>/tags/tm/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/tm/</guid>
+      <guid>/tags/tm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wordcloud</title>
-      <link>https://tgonza75.netlify.com/tags/wordcloud/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      <link>/tags/wordcloud/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/wordcloud/</guid>
+      <guid>/tags/wordcloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wordcloud2</title>
-      <link>https://tgonza75.netlify.com/tags/wordcloud2/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      <link>/tags/wordcloud2/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/tags/wordcloud2/</guid>
+      <guid>/tags/wordcloud2/</guid>
       <description></description>
     </item>
     

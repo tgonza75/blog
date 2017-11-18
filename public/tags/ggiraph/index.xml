@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ggiraph on Tiffany&#39;s Data Science Blog</title>
-    <link>https://tgonza75.netlify.com/tags/ggiraph/</link>
+    <link>/tags/ggiraph/</link>
     <description>Recent content in Ggiraph on Tiffany&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
     <lastBuildDate>Fri, 29 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tgonza75.netlify.com/tags/ggiraph/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/ggiraph/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dashboard</title>
-      <link>https://tgonza75.netlify.com/post/dashboard/</link>
+      <link>/post/dashboard/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/dashboard/</guid>
+      <guid>/post/dashboard/</guid>
       <description>Dashboards are a great way to organize and present information that is easy to read on one given page or site. A dashboard is an interactive tool that allows the user to visualize large amounts of data.To set up our dashboard we need to bring in our packages, and this time we will be adding the new package to set the dashboard up called, flexdashboard.
 The first graph shown is a scatterplot:</description>
     </item>
     
     <item>
       <title>Fun With Scatterplot</title>
-      <link>https://tgonza75.netlify.com/post/career-homeruns/</link>
+      <link>/post/career-homeruns/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/career-homeruns/</guid>
+      <guid>/post/career-homeruns/</guid>
       <description>In this post, we are going to learn how to create an interactive scatterplot. First we need to bring the packages we will be using into R.
 library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(ggiraph)As you can see, we are going to use one new package we have yet to look at, and that would be the ggiraph package.</description>
     </item>

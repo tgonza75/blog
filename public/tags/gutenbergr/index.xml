@@ -2,22 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gutenbergr on Tiffany&#39;s Data Science Blog</title>
-    <link>https://tgonza75.netlify.com/tags/gutenbergr/</link>
+    <link>/tags/gutenbergr/</link>
     <description>Recent content in Gutenbergr on Tiffany&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Your name or company</copyright>
-    <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tgonza75.netlify.com/tags/gutenbergr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/gutenbergr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Positive vs. Negative Wordcloud</title>
+      <link>/post/comparisonwordcloud/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/comparisonwordcloud/</guid>
+      <description>Comparison CloudThis post is similair to the Text Mining with Sentiments post on my blog. But for this particular one, we will be comparing the positive and negative sentiments, not with bar plots, but with a wordcloud.Let’s first import the packages we will be working with.
+Next let’s clean up our data. Since we have already been through this process I will just make brief notes within the coding.</description>
+    </item>
+    
+    <item>
       <title>Text Mining with Sentiments</title>
-      <link>https://tgonza75.netlify.com/post/sentiments/</link>
+      <link>/post/sentiments/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/sentiments/</guid>
+      <guid>/post/sentiments/</guid>
       <description>In this post we will be comparing two graphs, a graph with positive (sentiment) words, and one with negative. We will be using the gutenbergr package in R, but this time we will be dealing with the book Dracula. First let’s import the packages we will be working with:
 To get our data cleaned up and ready to work with sentiments, we will do the following:
 #Dracula is number 345 in the gutenbergr databasedracula&amp;lt;-gutenberg_download(345)## Determining mirror for Project Gutenberg from http://www.</description>
@@ -25,10 +35,10 @@ To get our data cleaned up and ready to work with sentiments, we will do the fol
     
     <item>
       <title>WordCloud</title>
-      <link>https://tgonza75.netlify.com/post/wordcloud/</link>
+      <link>/post/wordcloud/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tgonza75.netlify.com/post/wordcloud/</guid>
+      <guid>/post/wordcloud/</guid>
       <description>IntroductionA wordcloud is a weighted list, in visual design. It is an image of words put together, and the size of each word depends on it’s frequency, whether it be in a book or an article. In this post, you will learn how to use a playwright from the Gutenberg database, to make a wordcloud of the most frequently used words in the book ‘Peter Pan’.</description>
     </item>
     
