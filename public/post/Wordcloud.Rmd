@@ -78,7 +78,9 @@ wordcloud(word_freq$word,word_freq$count,min.freq=8)
 
 One final decision, depending on your personality...We can use the wordcloud2 package to make this a little bit more colorful and pretty.
 
-```{r}
+```{r message=FALSE,warning=FALSE}
 wordcloud2(word_freq,background='black')
 ```
+
+
 
